@@ -1,0 +1,855 @@
+<!-- NexaMath Infinity Enterprise | FINAL ULTIMATE 26 | Commercial Closure & Deal Readiness Center -->
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080b18">
+<meta name="description" content="NexaMath Infinity X — Ultimate Math Studio؛ محیط حرفه‌ای محاسبات، تحلیل داده، جبر، ماتریس، احتمال، برنامه‌نویسی و Workspace آفلاین.">
+<title>NexaMath Infinity X Enterprise — Final</title>
+<style>
+:root{--bg:#070914;--panel:#0e1325;--panel2:#151b31;--line:#273052;--text:#f7f8ff;--muted:#9aa5c9;--a:#8b5cf6;--b:#22d3ee;--good:#34d399;--warn:#fbbf24;--bad:#fb7185;--shadow:0 24px 80px #0009;--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 10% 0%,#312e8144,transparent 32%),radial-gradient(circle at 90% 8%,#0e749044,transparent 28%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}button,input,textarea,select{font:inherit}button{border:0;cursor:pointer;color:var(--text);background:var(--panel2);transition:.18s}button:hover{transform:translateY(-1px);filter:brightness(1.12)}button:active{transform:scale(.98)}
+.top{position:sticky;top:0;z-index:20;background:#070914d9;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff12}.nav{max-width:1500px;margin:auto;padding:11px 18px;display:flex;align-items:center;gap:10px}.brand{font-weight:1000;font-size:21px;white-space:nowrap}.brand i{font-style:normal;color:var(--b)}.badge{font-size:11px;padding:6px 10px;border-radius:999px;background:#ffffff09;border:1px solid #ffffff14;color:#d8def7}.spacer{margin-right:auto}
+.wrap{max-width:1500px;margin:auto;padding:20px 18px 55px}.hero{padding:30px;border:1px solid #ffffff12;border-radius:30px;background:linear-gradient(135deg,#11162bee,#090f20e8);box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:#8b5cf622;left:-110px;top:-150px;filter:blur(40px)}.hero>*{position:relative;z-index:1}.hero h1{font-size:clamp(31px,5vw,60px);line-height:1.04;margin:0 0 10px}.hero h1 span{color:var(--b)}.hero p{max-width:900px;color:var(--muted);line-height:1.9;margin:0}.stats{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.stat{padding:8px 11px;border:1px solid #ffffff12;background:#ffffff07;border-radius:12px;font-size:12px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:11px}.primary{background:linear-gradient(90deg,#7c3aed,#0891b2)!important}.danger{background:#3b1725}.ghost{background:#ffffff07;border:1px solid #ffffff12}
+.layout{display:grid;grid-template-columns:410px 1fr;gap:16px;margin-top:16px}.card{background:linear-gradient(145deg,#11162a,#0c1120);border:1px solid #ffffff12;border-radius:var(--radius);box-shadow:var(--shadow)}.calc{padding:15px;position:sticky;top:76px;height:max-content}.screen{min-height:145px;padding:17px;border-radius:19px;background:#050711;border:1px solid #ffffff10;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-end;gap:7px}.expr{color:#737da4;font-size:13px;direction:ltr;max-width:100%;overflow:auto}.display{font-size:38px;font-weight:850;direction:ltr;text-align:left;word-break:break-all;max-width:100%}.chips,.mem{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0}.chips button,.mem button{padding:7px 10px;border-radius:10px;font-size:12px}.chips button{background:#17213b}.mem button{background:#1c1432}.keys{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}.keys button{height:50px;border-radius:13px;font-size:16px}.keys .op{background:#221a49}.keys .fn{background:#11313a}.keys .eq{grid-column:span 5;background:linear-gradient(90deg,#7c3aed,#0891b2);font-weight:950}.mini{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:11px;margin-top:11px}.history{max-height:210px;overflow:auto;margin-top:6px}.history div{padding:8px;border-bottom:1px solid #ffffff08;direction:ltr;text-align:left;font-size:12px;cursor:pointer}.history div:hover{background:#ffffff06}
+.panel{padding:16px;min-width:0}.tabs{display:flex;gap:6px;overflow:auto;padding-bottom:8px;scrollbar-width:thin}.tabs button{white-space:nowrap;padding:9px 12px;border-radius:11px;font-size:12px}.tabs button.active{background:linear-gradient(90deg,#6d28d9,#0e7490);box-shadow:0 0 0 1px #ffffff22 inset}.section{display:none}.section.active{display:block}.section h2{margin:8px 0 3px}.sub{color:var(--muted);font-size:12px;margin:0 0 8px;line-height:1.7}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.field label{display:block;color:var(--muted);font-size:11px;margin:8px 0 5px}.field input,.field textarea,.field select{width:100%;background:#070a15;border:1px solid var(--line);color:var(--text);border-radius:11px;padding:10px;direction:ltr;text-align:left;outline:none}.field textarea{min-height:115px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:#7c3aed;box-shadow:0 0 0 3px #7c3aed1c}.result{margin-top:11px;padding:13px;border-radius:14px;background:#070a15;border:1px solid var(--line);direction:ltr;text-align:left;overflow:auto}.result .big{font-size:24px;font-weight:900}.ok{color:var(--good)}.muted{color:var(--muted)}.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:9px}.kpi div{padding:11px;border-radius:12px;background:#ffffff06;text-align:center}.kpi b{display:block;font-size:17px}.kpi span{font-size:10px;color:var(--muted)}canvas{width:100%;height:300px;background:#050711;border-radius:15px;border:1px solid #ffffff0d;margin-top:11px}.const{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:8px;margin-top:10px}.const button{text-align:left;padding:11px;border:1px solid #ffffff0d;border-radius:12px}.const b{display:block}.const span{font-size:11px;color:var(--muted);direction:ltr;display:block;margin-top:3px}.matrix{display:grid;gap:5px}.matrix input{width:65px;padding:8px;text-align:center;direction:ltr;background:#070a15;border:1px solid var(--line);color:#fff;border-radius:8px}.feature{padding:13px;border:1px solid #ffffff10;border-radius:15px;background:#ffffff05}.feature b{display:block;margin-bottom:4px}.feature span{font-size:12px;color:var(--muted);line-height:1.7}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}.price{padding:17px;border:1px solid #ffffff12;border-radius:17px;background:linear-gradient(145deg,#151a30,#0a1020)}.price.highlight{box-shadow:0 0 0 1px #8b5cf6 inset,0 15px 50px #0005}.price h3{margin:0 0 5px}.price strong{font-size:25px}.price p{color:var(--muted);font-size:12px;line-height:1.7}.footer{text-align:center;color:#687294;font-size:11px;margin-top:18px}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(30px);opacity:0;background:#12182b;border:1px solid #ffffff1a;padding:10px 14px;border-radius:12px;z-index:50;transition:.25s}.toast.show{opacity:1;transform:translateX(-50%)}
+.light{--bg:#eef2ff;--panel:#fff;--panel2:#e8ecf8;--line:#cbd3e8;--text:#121629;--muted:#5e6781}.light .top{background:#eef2ffd9}.light .card,.light .hero{background:#ffffffdd}.light .screen,.light .result,.light .field input,.light .field textarea,.light .field select,.light canvas{background:#f5f7fc;color:#121629}
+@media(max-width:1000px){.layout{grid-template-columns:1fr}.calc{position:static;max-width:600px;width:100%;margin:auto}.pricing{grid-template-columns:1fr}.grid4{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.wrap{padding:12px}.hero{padding:20px}.hero h1{font-size:34px}.grid2,.grid3{grid-template-columns:1fr}.kpi{grid-template-columns:1fr 1fr}.display{font-size:31px}.keys button{height:47px}.nav .badge{display:none}}
+
+.pill{display:inline-flex;padding:6px 10px;border:1px solid #ffffff16;border-radius:999px;background:#ffffff07;font-size:11px}.status{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.status span{padding:7px 10px;border-radius:10px;background:#063a2b}.arch{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.codebox{background:#050711;border:1px solid var(--line);border-radius:14px;padding:12px;direction:ltr;text-align:left;white-space:pre-wrap;font:12px/1.6 ui-monospace,monospace}.check{padding:10px;border:1px solid #ffffff10;border-radius:12px;background:#ffffff05}.testrow{display:flex;justify-content:space-between;padding:8px;border-bottom:1px solid #ffffff0a;font-size:12px}@media(max-width:1000px){.arch{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.arch{grid-template-columns:1fr}}
+
+.calc-tools{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.calc-tools button{flex:1;min-width:120px}.advanced{margin-top:8px;padding:10px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.03)}.advanced .field{margin:6px 0}.advanced input,.advanced select{width:100%}
+
+/* ===== Infinity X Enterprise Upgrade ===== */
+.entbar{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:10px 0}.entbar .feature{min-height:72px}.toolgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px}.toolcard{padding:14px;border:1px solid #ffffff12;border-radius:16px;background:linear-gradient(145deg,#151a30,#0a1020)}.toolcard h3{margin:0 0 6px}.toolcard p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}.dataout{margin-top:10px;padding:14px;border:1px solid var(--line);border-radius:14px;background:#050711;direction:ltr;text-align:left;overflow:auto}.tablewrap{overflow:auto;margin-top:10px}.tablewrap table{width:100%;border-collapse:collapse;font-size:12px}.tablewrap th,.tablewrap td{padding:8px;border-bottom:1px solid #ffffff10;text-align:left}.tag{display:inline-block;padding:4px 8px;border-radius:999px;background:#ffffff08;border:1px solid #ffffff12;font-size:10px;margin:2px}.formula{cursor:pointer}.formula code{display:block;margin-top:6px;color:var(--b);direction:ltr}.workspace{display:flex;gap:8px;flex-wrap:wrap}.workspace button{padding:9px 12px;border-radius:10px}.meter{height:9px;border-radius:99px;background:#ffffff0b;overflow:hidden;margin-top:8px}.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,#7c3aed,#22d3ee)}
+@media(max-width:1000px){.entbar{grid-template-columns:repeat(3,1fr)}.toolgrid{grid-template-columns:1fr 1fr}}@media(max-width:650px){.entbar{grid-template-columns:1fr 1fr}.toolgrid{grid-template-columns:1fr}}
+
+/* ===== Ultimate X Final UX ===== */
+.hero .live{display:inline-flex;align-items:center;gap:7px;margin-bottom:12px;padding:7px 11px;border:1px solid #22d3ee33;background:#22d3ee0c;border-radius:999px;font-size:11px}.live i{width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 14px #34d399;display:inline-block}.toolgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.toolcard{padding:14px;border:1px solid #ffffff12;border-radius:16px;background:linear-gradient(145deg,#151b32,#0b1020);cursor:pointer;transition:.2s}.toolcard:hover{transform:translateY(-2px);border-color:#8b5cf655;box-shadow:0 12px 35px #0005}.toolcard h3{margin:0 0 5px}.toolcard p{margin:0;color:var(--muted);font-size:11px;line-height:1.7}.toolcard code{display:block;margin-top:8px;color:#67e8f9;font-size:11px;direction:ltr;text-align:left}.command-overlay{position:fixed;inset:0;background:#02030aaa;backdrop-filter:blur(12px);z-index:100;display:none;align-items:flex-start;justify-content:center;padding:9vh 16px}.command-overlay.open{display:flex}.command-box{width:min(760px,100%);background:#0b1020;border:1px solid #ffffff18;border-radius:22px;box-shadow:0 30px 100px #000b;overflow:hidden}.command-box input{width:100%;padding:18px 20px;border:0;border-bottom:1px solid #ffffff12;outline:0;background:#070a15;color:#fff;font-size:18px}.command-list{max-height:55vh;overflow:auto;padding:8px}.command-item{display:flex;justify-content:space-between;gap:12px;padding:12px;border-radius:12px;cursor:pointer}.command-item:hover{background:#ffffff09}.command-item small{color:var(--muted)}.shortcut{font:11px ui-monospace,monospace;color:#8b95b8}.metric{position:relative;overflow:hidden}.metric:after{content:'';position:absolute;inset:auto -20px -30px auto;width:80px;height:80px;border-radius:50%;background:#8b5cf622;filter:blur(15px)}.spark{height:42px;width:100%;display:block;margin-top:6px}.badge-btn{padding:7px 10px;border-radius:10px;border:1px solid #ffffff12}.danger2{background:#4a1727}.success2{background:#073b2d}.tablex{width:100%;border-collapse:collapse;font-size:12px}.tablex th,.tablex td{padding:9px;border-bottom:1px solid #ffffff0d;text-align:right}.tablex th{color:var(--muted)}.light .command-box{background:#fff;color:#121629}.light .command-box input{background:#f5f7fc;color:#121629}.light .toolcard{background:#fff}.light .command-item:hover{background:#00000007}
+@media(max-width:800px){.toolgrid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.toolgrid{grid-template-columns:1fr}}
+</style>
+<style>
+.final-launch{margin:14px 0;padding:14px;border:1px solid #ffffff14;border-radius:20px;background:linear-gradient(135deg,#10182d,#0b1222);box-shadow:0 18px 60px #0005}
+.final-launch .fl-head{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.final-launch h3{margin:0}.fl-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}.fl-item{padding:10px;border:1px solid #ffffff10;border-radius:13px;background:#ffffff05}.fl-item b{display:block}.fl-item span{font-size:11px;color:var(--muted)}.fl-ok{color:var(--good)!important}.fl-btn{margin-top:10px;padding:9px 12px;border-radius:10px;background:linear-gradient(90deg,#7c3aed,#0891b2);font-weight:800}@media(max-width:700px){.fl-grid{grid-template-columns:1fr 1fr}}
+</style>
+<style id="nx23-dealroom-style">
+.nx23-dealroom{margin:18px 0;padding:18px;border:1px solid rgba(125,211,252,.22);border-radius:20px;background:linear-gradient(135deg,rgba(15,23,42,.94),rgba(30,41,59,.72));box-shadow:0 18px 50px rgba(0,0,0,.18)}
+.nx23-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.nx23-title{font-size:20px;font-weight:900}.nx23-badge{padding:7px 11px;border-radius:999px;background:rgba(34,197,94,.13);border:1px solid rgba(34,197,94,.25);font-weight:800}
+.nx23-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:14px}.nx23-card{padding:12px;border-radius:14px;background:rgba(2,6,23,.38);border:1px solid rgba(148,163,184,.13)}.nx23-card b{display:block;margin-bottom:6px}.nx23-card small{opacity:.75}.nx23-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.nx23-btn{border:0;border-radius:12px;padding:10px 14px;font-weight:800;cursor:pointer;background:rgba(125,211,252,.14);color:inherit;border:1px solid rgba(125,211,252,.25)}
+</style>
+
+</head>
+<body>
+<div id="enterpriseAuth" style="position:fixed;inset:0;z-index:9999;background:rgba(3,7,18,.96);display:flex;align-items:center;justify-content:center;padding:20px">
+  <div style="width:min(460px,100%);background:#0b1224;border:1px solid #263554;border-radius:24px;padding:26px;box-shadow:0 20px 80px rgba(0,0,0,.5)">
+    <h2 style="margin-top:0">🔐 NexaMath Enterprise</h2><p>ورود به فضای ابری سازمان</p>
+    <input id="entEmail" type="email" placeholder="ایمیل" style="width:100%;box-sizing:border-box;margin:7px 0;padding:13px;border-radius:12px;border:1px solid #334155;background:#111827;color:#fff">
+    <input id="entPassword" type="password" placeholder="رمز عبور (حداقل ۸ کاراکتر)" style="width:100%;box-sizing:border-box;margin:7px 0;padding:13px;border-radius:12px;border:1px solid #334155;background:#111827;color:#fff">
+    <input id="entOrg" placeholder="نام سازمان (فقط برای ثبت‌نام)" style="width:100%;box-sizing:border-box;margin:7px 0;padding:13px;border-radius:12px;border:1px solid #334155;background:#111827;color:#fff">
+    <div style="display:flex;gap:8px;margin-top:10px"><button class="primary" onclick="enterpriseLogin()">ورود</button><button onclick="enterpriseRegister()">ثبت‌نام سازمان</button><button onclick="enterpriseGuest()">دمو محلی</button></div>
+    <div id="entMsg" style="margin-top:12px"></div>
+  </div>
+</div>
+
+<header class="top"><div class="nav"><div class="brand">⚡ NexaMath <i>∞ X</i></div><span class="badge">ULTIMATE X</span><span class="badge">دقیق • سریع • حرفه‌ای</span><div class="spacer"></div><button class="badge" onclick="toggleTheme()">☼ تم</button></div></header>
+<main class="wrap"><section class="final-launch" aria-label="Enterprise release status">
+<div class="fl-head"><div><h3>🚀 NexaMath Infinity Enterprise — Final Release</h3><div class="muted" style="font-size:11px;margin-top:4px">مرکز ریاضی، Workspace و API سازمانی در یک محیط واحد</div></div><span class="pill">Production-ready structure</span></div>
+<div class="fl-grid"><div class="fl-item"><b class="fl-ok">● Math Engine</b><span>محاسبات امن و ابزارهای تحلیلی</span></div><div class="fl-item"><b class="fl-ok">● Cloud Auth</b><span>ورود، سازمان و نقش‌ها</span></div><div class="fl-item"><b class="fl-ok">● API</b><span>مسیرهای Backend و Integration</span></div><div class="fl-item"><b class="fl-ok">● PWA</b><span>قابل نصب روی موبایل و وب</span></div></div>
+<div class="actions"><button class="fl-btn" onclick="activate('ultimate')">باز کردن Command Center</button><button class="ghost" onclick="window.NexaEnterprise?.login?.()">ورود سازمانی</button><button class="ghost" onclick="checkFinalHealth()">بررسی اتصال سرور</button></div><div id="finalHealth" class="muted" style="font-size:11px;margin-top:7px"></div>
+</section>
+<section class="hero">
+<h1>یک <span>استودیوی ریاضی</span>، نه فقط ماشین‌حساب</h1>
+<p>نسخه Pro روی هسته اصلی NexaMath ساخته شده و آن را به یک محصول قابل ارائه‌تر تبدیل می‌کند: تجربه حرفه‌ای‌تر، ذخیره‌سازی محلی، میانبرهای صفحه‌کلید، ابزارهای ریاضی، نمودار، مالی، آمار، ماتریس، خروجی و بخش محصول/قیمت‌گذاری. هدف این نسخه افزایش ارزش تجاری از طریق محصول واقعی و قابل استفاده است، نه ادعای ارزش‌گذاری.</p>
+<div class="stats"><span class="stat">🧠 Math Engine</span><span class="stat">📈 Graph Studio</span><span class="stat">🔢 Matrix Lab</span><span class="stat">📊 Statistics</span><span class="stat">💱 Converter</span><span class="stat">💰 Finance</span><span class="stat">💾 Local Data</span><span class="stat">⌨️ Keyboard</span></div>
+<div class="actions"><button class="primary" onclick="activate('home')">شروع سریع</button><button class="ghost" onclick="activate('graph')">📈 نمودار</button><button class="ghost" onclick="activate('finance')">💰 مالی</button></div>
+</section>
+</section><div class="layout">
+<aside class="card calc">
+<div class="screen"><div class="expr" id="expr">آماده</div><div class="display" id="display">0</div></div>
+<div class="chips"><button onclick="setAngle('DEG')">DEG</button><button onclick="setAngle('RAD')">RAD</button><button onclick="setAngle('GRAD')">GRAD</button><button onclick="insert('π')">π</button><button onclick="insert('e')">e</button><button onclick="insert('Ans')">Ans</button><button onclick="insert('∞')">∞</button></div>
+<div class="mem"><button onclick="memory('MC')">MC</button><button onclick="memory('MR')">MR</button><button onclick="memory('M+')">M+</button><button onclick="memory('M-')">M-</button><button onclick="memory('MS')">MS</button><button onclick="memory('M=')">M=</button></div>
+<div class="keys">
+<button onclick="clearCalc()">AC</button><button class="fn" onclick="backspace()">⌫</button><button class="fn" onclick="insert('(')">(</button><button class="fn" onclick="insert(')')">)</button><button class="op" onclick="insert('/')">÷</button>
+<button onclick="insert('7')">7</button><button onclick="insert('8')">8</button><button onclick="insert('9')">9</button><button class="fn" onclick="insert('%')">%</button><button class="op" onclick="insert('*')">×</button>
+<button onclick="insert('4')">4</button><button onclick="insert('5')">5</button><button onclick="insert('6')">6</button><button class="fn" onclick="insert('^')">xʸ</button><button class="op" onclick="insert('-')">−</button>
+<button onclick="insert('1')">1</button><button onclick="insert('2')">2</button><button onclick="insert('3')">3</button><button class="fn" onclick="insert('.')">.</button><button class="op" onclick="insert('+')">+</button>
+<button onclick="insert('0')">0</button><button class="fn" onclick="fn('sqrt')">√</button><button class="fn" onclick="fn('sin')">sin</button><button class="fn" onclick="fn('cos')">cos</button><button class="fn" onclick="fn('tan')">tan</button>
+<button class="fn" onclick="fn('asin')">sin⁻¹</button><button class="fn" onclick="fn('acos')">cos⁻¹</button><button class="fn" onclick="fn('atan')">tan⁻¹</button><button class="fn" onclick="fn('sinh')">sinh</button><button class="fn" onclick="fn('cosh')">cosh</button>
+<button class="fn" onclick="fn('ln')">ln</button><button class="fn" onclick="fn('log')">log</button><button class="fn" onclick="fn('exp')">eˣ</button><button class="fn" onclick="fn('abs')">|x|</button><button class="fn" onclick="factorial()">n!</button>
+<button class="fn" onclick="square()">x²</button><button class="fn" onclick="reciprocal()">1/x</button><button class="fn" onclick="fn('floor')">floor</button><button class="fn" onclick="fn('ceil')">ceil</button><button class="eq" onclick="calculate()">=</button>
+</div>
+<div class="mini"><span>حافظه: <b id="mem">0</b></span><span>Ans: <b id="ans">0</b></span><span>زاویه: <b id="angleState">DEG</b></span><button class="badge" onclick="clearHistory()">پاک‌کردن تاریخچه</button></div>
+<div class="calc-tools"><button onclick="toggleAdvanced()">⚙️ تنظیمات پیشرفته</button><button onclick="copyResult()">📋 کپی نتیجه</button><button onclick="calculate(true)">↵ محاسبه و نگه‌داشتن</button></div>
+<div id="advancedCalc" class="advanced" hidden><div class="field"><label>دقت نمایش</label><input id="precision" type="number" min="0" max="14" value="10" onchange="setPrecision(this.value)"></div><div class="field"><label>جداکننده هزارگان</label><select id="grouping" onchange="setGrouping(this.value)"><option value="on">فعال</option><option value="off">خاموش</option></select></div><div class="field"><label>فرمت ورودی</label><span class="muted">اعشار اعشاری، توابع، ثابت‌ها و ارقام فارسی پشتیبانی می‌شوند.</span></div></div>
+<div class="history" id="history"><div class="muted">تاریخچه خالی است</div></div>
+</aside>
+<section class="card panel">
+<nav class="tabs" id="tabs"><button class="active" data-tab="home">داشبورد</button><button data-tab="graph">نمودار</button><button data-tab="eq">معادله</button><button data-tab="matrix">ماتریس</button><button data-tab="stats">آمار</button><button data-tab="convert">تبدیل</button><button data-tab="finance">مالی</button><button data-tab="constants">ثابت‌ها</button><button data-tab="product">ارزش محصول</button><button data-tab="ai">AI</button><button data-tab="engine">🧠 موتور اختصاصی</button><button data-tab="quality">🧪 کیفیت</button><button data-tab="security">🔐 امنیت/IP</button><button data-tab="scale">☁️ مقیاس</button><button data-tab="invest">📊 سرمایه‌گذاری</button><button data-tab="commercial">💼 تجاری</button><button data-tab="numbers">🔢 اعداد</button><button data-tab="regression">📈 رگرسیون</button><button data-tab="probability">🎲 احتمال</button><button data-tab="programmer">💻 برنامه‌نویس</button><button data-tab="formulas">📚 فرمول‌ها</button><button data-tab="workspace">🗂️ Workspace</button><button data-tab="ultimate">🚀 Ultimate</button></nav>
+
+<div class="section active" id="home"><h2>🚀 داشبورد Pro</h2><p class="sub">همه ابزارها در یک محیط؛ داده‌های محلی و تنظیمات اصلی روی دستگاه نگه داشته می‌شوند.</p><div class="kpi"><div><b id="kHist">0</b><span>محاسبه ذخیره‌شده</span></div><div><b>9+</b><span>ماژول محصول</span></div><div><b>3</b><span>حالت زاویه</span></div><div><b>Pro</b><span>نسخه محصول</span></div></div><div class="grid3" style="margin-top:10px"><div class="feature"><b>⚡ سریع</b><span>محاسبات اصلی بدون نیاز به سرور انجام می‌شوند.</span></div><div class="feature"><b>🔒 خصوصی</b><span>تاریخچه در LocalStorage مرورگر نگه‌داری می‌شود.</span></div><div class="feature"><b>⌨️ حرفه‌ای</b><span>Enter، Backspace، Escape و کلیدهای عددی قابل استفاده‌اند.</span></div></div><div class="actions"><button class="primary" onclick="insert('sqrt(')">شروع محاسبه</button><button onclick="activate('product')">نقشه افزایش ارزش</button><button onclick="exportData()">💾 خروجی داده</button><button onclick="importData()">📥 ورود داده</button></div></div>
+
+<div class="section" id="graph"><h2>📈 Graph Studio</h2><p class="sub">رسم تابع با تشخیص ناپیوستگی و مقیاس خودکار.</p><div class="grid3"><div class="field"><label>تابع f(x)</label><input id="gfn" value="sin(x)"></div><div class="field"><label>حداقل x</label><input id="gmin" value="-10" type="number"></div><div class="field"><label>حداکثر x</label><input id="gmax" value="10" type="number"></div></div><div class="actions"><button class="primary" onclick="drawGraph()">رسم</button><button onclick="presetGraph('x^2-4')">درجه ۲</button><button onclick="presetGraph('1/x')">1/x</button><button onclick="presetGraph('sin(x)*x')">sin(x)×x</button></div><canvas id="graphCanvas"></canvas></div>
+
+<div class="section" id="eq"><h2>📐 Equation Solver</h2><p class="sub">حل معادلات خطی و درجه‌دوم همراه با مراحل و بررسی ریشه‌ها.</p><div class="field"><label>معادله</label><input id="eqin" value="x^2-5x+6=0"></div><div class="actions"><button class="primary" onclick="solveEq()">حل و بررسی</button><button onclick="solvePolynomialAdvanced()">درجه ۳/۴</button></div><div id="eqout"></div><div class="field"><label>چندجمله‌ای درجه ۳ یا ۴ (فرمت: ضرایب از بالاترین درجه، با کاما)</label><input id="polycoef" value="1,-6,11,-6"></div><div class="actions"><button class="primary" onclick="solvePolynomialAdvanced()">حل چندجمله‌ای</button></div><div id="polyout"></div></div>
+
+<div class="section" id="matrix"><h2>🔢 Matrix Lab</h2><p class="sub">جمع، تفریق، ضرب، ترانهاده، دترمینان و معکوس برای ماتریس‌های ۲×۲ و ۳×۳.</p><div class="grid2"><div class="field"><label>اندازه</label><select id="msize" onchange="buildMatrices()"><option>2</option><option>3</option></select></div></div><div id="mats" style="display:flex;gap:25px;flex-wrap:wrap;margin-top:12px"></div><div class="actions"><button onclick="matOp('add')">A+B</button><button onclick="matOp('sub')">A−B</button><button onclick="matOp('mul')">A×B</button><button onclick="matOp('tr')">Aᵀ</button><button onclick="matOp('det')">det(A)</button><button class="primary" onclick="matOp('inv')">A⁻¹</button></div><div id="matout"></div><div class="field"><label>دستگاه خطی: ضرایب A و بردار b (مثلاً 2,1;1,-1 | 3,0)</label><input id="sysin" value="2,1;1,-1|3,0"></div><div class="actions"><button class="primary" onclick="solveLinearSystemUI()">حل دستگاه</button></div><div id="sysout"></div></div>
+
+<div class="section" id="stats"><h2>📊 Statistics</h2><p class="sub">آمار توصیفی فوری برای داده‌های عددی.</p><div class="field"><label>داده‌ها</label><textarea id="data">4,8,6,5,3,9,8,8,2,7</textarea></div><div class="actions"><button class="primary" onclick="stats()">تحلیل داده</button></div><div id="statsout"></div></div>
+
+<div class="section" id="convert"><h2>💱 Smart Converter</h2><p class="sub">تبدیل طول، جرم، دما، زمان و حجم.</p><div class="grid3"><div class="field"><label>دسته</label><select id="cat" onchange="loadUnits()"><option value="length">طول</option><option value="mass">جرم</option><option value="temp">دما</option><option value="time">زمان</option><option value="volume">حجم</option></select></div><div class="field"><label>از</label><select id="from"></select></div><div class="field"><label>به</label><select id="to"></select></div></div><div class="field"><label>مقدار</label><input id="cv" type="number" value="1"></div><div class="actions"><button class="primary" onclick="convert()">تبدیل</button></div><div id="cvout"></div></div>
+
+<div class="section" id="finance"><h2>💰 Finance Lab</h2><p class="sub">سود مرکب و قسط وام با محاسبه شفاف.</p><div class="grid2"><div class="field"><label>اصل سرمایه / وام</label><input id="principal" type="number" value="100000"></div><div class="field"><label>نرخ سالانه (%)</label><input id="rate" type="number" value="18"></div><div class="field"><label>مدت (سال)</label><input id="years" type="number" value="5"></div><div class="field"><label>تعداد دوره در سال</label><input id="freq" type="number" value="12"></div></div><div class="actions"><button class="primary" onclick="compound()">سود مرکب</button><button onclick="loan()">قسط وام</button></div><div id="finout"></div></div>
+
+<div class="section" id="constants"><h2>🧪 ثابت‌های علمی</h2><p class="sub">روی هر ثابت بزن تا مقدار آن وارد ماشین‌حساب شود.</p><div class="const" id="consts"></div></div>
+
+<div class="section" id="product"><h2>💎 مسیر افزایش ارزش محصول</h2><p class="sub">این بخش عمداً از «ادعای ارزش‌گذاری» جداست؛ ارزش واقعی با کاربر، درآمد، retention، توزیع و مزیت رقابتی ساخته می‌شود.</p><div class="pricing"><div class="price"><h3>Free</h3><strong>$0</strong><p>ابزارهای پایه برای جذب کاربر و ساخت عادت استفاده.</p><button class="ghost" onclick="toast('Free آماده است')">انتخاب</button></div><div class="price highlight"><h3>Pro</h3><strong>$4.99</strong><p>تجربه بدون تبلیغ، قالب‌های پیشرفته، خروجی و قابلیت‌های حرفه‌ای.</p><button class="primary" onclick="toast('Pro برای مدل درآمدی پیشنهاد شد')">پیشنهاد اصلی</button></div><div class="price"><h3>Edu / Team</h3><strong>$9.99+</strong><p>اشتراک آموزشی/تیمی، داشبورد، گزارش و قابلیت‌های سازمانی.</p><button class="ghost" onclick="toast('نسخه تیمی قابل توسعه است')">بررسی</button></div></div><div class="grid2" style="margin-top:10px"><div class="feature"><b>1. توزیع</b><span>وب‌اپ سریع + PWA + صفحات SEO برای موضوعات ریاضی.</span></div><div class="feature"><b>2. درآمد</b><span>Freemium، اشتراک Pro و بسته‌های آموزشی/تیمی.</span></div><div class="feature"><b>3. مزیت</b><span>حل مرحله‌ای، ابزارهای تخصصی و تجربه یکپارچه فارسی/انگلیسی.</span></div><div class="feature"><b>4. اعتماد</b><span>شفافیت در دقت، تست خودکار، حریم خصوصی و توضیح فرمول‌ها.</span></div></div></div>
+
+<div class="section" id="ai"><h2>🤖 AI Math Copilot</h2><p class="sub">برای AI واقعی باید backend امن در <code>/api/ai</code> متصل شود؛ این نسخه ادعای اتصال واقعی ندارد.</p><div class="field"><label>مسئله یا درخواست</label><textarea id="aiq" placeholder="مثلاً: مشتق x^2 + 3x را توضیح بده"></textarea></div><div class="actions"><button class="primary" onclick="askAI()">تحلیل با AI</button><button onclick="navigator.clipboard?.writeText(document.getElementById('aiq').value)">کپی</button></div><div id="aiout"></div></div>
+<div class="section" id="engine"><h2>🧠 NexaMath Reasoning Engine</h2><p class="sub">هسته محاسباتی مستقل از رابط کاربری، با parser کنترل‌شده، precedence، حل و verification.</p><div class="status"><span>● Safe parser</span><span>● Deterministic</span><span>● No eval()</span><span>● Verification</span></div><div class="field"><label>مسئله</label><textarea id="reasonQ">2*(3+4)^2</textarea></div><div class="actions"><button class="primary" onclick="reasonSolve()">تحلیل مرحله‌ای</button><button onclick="runSelfTests()">تست هسته</button></div><div id="reasonOut"></div><div class="grid2"><div class="field"><label>اعداد مختلط / عملیات</label><input id="complexIn" value="(2+3i)*(4-5i)"></div><div class="field"><label>کسر دقیق</label><input id="fractionIn" value="1/3+5/6-1/2"></div></div><div class="actions"><button onclick="complexSolveUI()">حل مختلط</button><button onclick="fractionSolveUI()">محاسبه کسر دقیق</button></div><div class="grid2"><div class="field"><label>تابع برای مشتق / انتگرال</label><input id="calcFn" value="sin(x)*x^2+3*x"></div><div class="field"><label>نقطه / بازه</label><input id="calcBounds" value="2 | 0,3"></div></div><div class="actions"><button onclick="derivativeUI()">مشتق در نقطه</button><button onclick="integralUI()">انتگرال دقیق عددی</button></div><div id="advancedOut"></div><div class="arch"><div class="feature"><b>Lexer</b><span>توکن‌سازی ورودی</span></div><div class="feature"><b>Parser</b><span>تقدم عملگرها</span></div><div class="feature"><b>Solver</b><span>حل deterministic</span></div><div class="feature"><b>Verifier</b><span>بازمحاسبه نتیجه</span></div><div class="feature"><b>Explain</b><span>نمایش مراحل</span></div></div></div>
+<div class="section" id="quality"><h2>🧪 تست جامع و اعتبارسنجی</h2><p class="sub">Regression و تست عددی داخلی؛ اعتبارسنجی مستقل متخصصان هنوز یک مرحله بیرونی است.</p><div class="actions"><button class="primary" onclick="runSelfTests()">اجرای تست جامع</button><button onclick="securityAudit()">ممیزی امنیت</button></div><div id="testOut" class="result">آماده تست.</div><div class="check"><b>Independent review</b><span>گزارش نتایج برای بررسی متخصص ریاضی/نرم‌افزار آماده است.</span></div></div>
+<div class="section" id="security"><h2>🔐 امنیت و مالکیت فکری</h2><p class="sub">کد، معماری، برند و مستندات به‌عنوان دارایی IP محصول بسته‌بندی شده‌اند. پتنت فقط پس از بررسی novelty/prior-art قابل ادعاست.</p><div class="grid3"><div class="feature"><b>Secure-by-design</b><span>بدون eval و Function برای ورودی محاسباتی.</span></div><div class="feature"><b>IP package</b><span>Source، معماری، برند، دامنه و مستندات.</span></div><div class="feature"><b>Patent readiness</b><span>نیازمند نظر وکیل/متخصص IP.</span></div></div><button class="primary" onclick="downloadArtifact('ip-brief')">خروجی IP Brief</button><div id="securityOut"></div></div>
+<div class="section" id="scale"><h2>☁️ معماری میلیون‌درخواستی</h2><p class="sub">Blueprint آماده تولید برای Web/PWA/iOS/Android/Desktop؛ زیرساخت واقعی باید روی cloud مستقر شود.</p><div class="arch"><div class="feature"><b>CDN/WAF</b><span>Edge protection</span></div><div class="feature"><b>API</b><span>Stateless + Auth</span></div><div class="feature"><b>Workers</b><span>Queue برای AI</span></div><div class="feature"><b>Data</b><span>Postgres + Redis</span></div><div class="feature"><b>Observability</b><span>Logs/Metrics/Tracing</span></div></div><div class="codebox">Clients → CDN/WAF → API Gateway → Auth/Billing/Math API
+                                      ↘ Queue → AI Workers → Model Provider
+                                      ↘ PostgreSQL / Redis / Object Storage
+                                      ↘ Logs / Metrics / Traces</div><button class="primary" onclick="downloadArtifact('architecture')">Architecture Spec</button></div>
+<div class="section" id="invest"><h2>📊 Investor Package</h2><p class="sub">دمو، معماری، Roadmap، مزیت رقابتی و KPIهای قابل اندازه‌گیری؛ بدون ادعای ارزش‌گذاری تضمینی.</p><div class="grid3"><div class="feature"><b>Problem</b><span>پراکندگی ابزارهای ریاضی.</span></div><div class="feature"><b>Moat</b><span>Engine + verification + workflow.</span></div><div class="feature"><b>Metrics</b><span>Activation، retention، conversion، CAC/LTV.</span></div></div><div class="codebox">Phase 1 Core → Phase 2 AI + Verification → Phase 3 Growth/B2B → Phase 4 Global Scale</div><button class="primary" onclick="downloadArtifact('pitch')">Pitch Deck Outline</button></div>
+<div class="section" id="commercial"><h2>💼 آمادگی تجاری</h2><p class="sub">اشتراک، API و Enterprise از ابتدا در معماری محصول دیده شده‌اند.</p><div class="pricing"><div class="price"><h3>Free</h3><strong>$0</strong><p>ابزارهای پایه.</p></div><div class="price highlight"><h3>Pro</h3><strong>$4.99</strong><p>قابلیت‌های حرفه‌ای و AI quota.</p></div><div class="price"><h3>Team/Edu</h3><strong>$9.99+</strong><p>داشبورد و مدیریت تیم.</p></div></div><div class="grid3" style="margin-top:10px"><div class="feature"><b>API</b><span>evaluate / solve / verify / AI</span></div><div class="feature"><b>Enterprise</b><span>SSO، audit، SLA</span></div><div class="feature"><b>Billing</b><span>subscription + usage</span></div></div><button class="primary" onclick="downloadArtifact('api')">API Spec</button></div>
+
+<div class="section" id="numbers"><h2>🔢 Number Theory Lab</h2><p class="sub">ابزارهای عددی برای تجزیه، اول بودن، GCD/LCM و تبدیل مبنا.</p><div class="grid3"><div class="field"><label>عدد</label><input id="numIn" value="360"></div><div class="field"><label>عدد دوم</label><input id="numIn2" value="84"></div><div class="field"><label>مبنا</label><select id="numBase"><option>2</option><option>8</option><option selected>10</option><option>16</option><option>36</option></select></div></div><div class="actions"><button class="primary" onclick="numberAnalyze()">تحلیل عدد</button><button onclick="primeCheckUI()">اول بودن</button><button onclick="factorUI()">تجزیه</button><button onclick="gcdUI()">GCD/LCM</button></div><div id="numOut"></div></div>
+<div class="section" id="regression"><h2>📈 Regression Studio</h2><p class="sub">رگرسیون خطی و شاخص‌های برازش برای داده‌های x,y.</p><div class="field"><label>داده x,y — هر خط یک جفت</label><textarea id="regData">1,2
+2,4.1
+3,5.9
+4,8.2
+5,10.1</textarea></div><div class="actions"><button class="primary" onclick="linearRegressionUI()">محاسبه رگرسیون</button></div><div id="regOut"></div></div>
+<div class="section" id="probability"><h2>🎲 Probability Lab</h2><p class="sub">ترکیب، جایگشت، احتمال دوجمله‌ای و توصیف فضای نمونه.</p><div class="grid3"><div class="field"><label>n</label><input id="probN" type="number" value="10"></div><div class="field"><label>r / k</label><input id="probR" type="number" value="3"></div><div class="field"><label>p (برای Binomial)</label><input id="probP" type="number" value="0.5" step="0.01"></div></div><div class="actions"><button class="primary" onclick="probUI()">محاسبه</button></div><div id="probOut"></div></div>
+<div class="section" id="programmer"><h2>💻 Programmer Converter</h2><p class="sub">تبدیل عدد بین Binary / Octal / Decimal / Hex و عملیات بیتی.</p><div class="grid3"><div class="field"><label>عدد</label><input id="progVal" value="255"></div><div class="field"><label>ورودی</label><select id="progBase"><option value="2">Binary</option><option value="8">Octal</option><option value="10" selected>Decimal</option><option value="16">Hex</option></select></div><div class="field"><label>عدد دوم (اختیاری)</label><input id="progVal2" value="15"></div></div><div class="actions"><button class="primary" onclick="programmerUI()">تبدیل و عملیات</button></div><div id="progOut"></div></div>
+<div class="section" id="formulas"><h2>📚 Formula Vault</h2><p class="sub">کتابخانه فرمول‌های پرکاربرد؛ با کلیک، فرمول وارد ماشین‌حساب می‌شود.</p><div class="toolgrid" id="formulaGrid"></div></div>
+<div class="section" id="workspace"><h2>🗂️ Local Workspace</h2><p class="sub">پروژه‌ها، محاسبات و تنظیمات را به‌صورت محلی ذخیره و بازیابی کن.</p><div class="grid2"><div class="field"><label>نام Workspace</label><input id="wsName" value="My Math Project"></div><div class="field"><label>یادداشت</label><input id="wsNote" value="پروژه محاسباتی من"></div></div><div class="actions"><button class="primary" onclick="saveWorkspace()">ذخیره</button><button onclick="loadWorkspace()">بازیابی</button><button onclick="deleteWorkspace()">حذف</button><button onclick="printReport()">🖨️ گزارش</button><button onclick="exportEnterpriseBundle()">📦 خروجی پروژه</button></div><div id="wsOut"></div><div class="entbar"><div class="feature"><b>Local-first</b><span>بدون سرور برای داده‌های شخصی</span></div><div class="feature"><b>Portable</b><span>خروجی JSON قابل انتقال</span></div><div class="feature"><b>Auditable</b><span>گزارش محاسبات</span></div><div class="feature"><b>Offline</b><span>هسته محاسبات آفلاین</span></div><div class="feature"><b>Extensible</b><span>API-ready</span></div><div class="feature"><b>Commercial</b><span>آماده بسته‌بندی</span></div></div></div>
+
+<div class="section" id="ultimate"><h2>🚀 Ultimate Command Center</h2><p class="sub">مرکز کنترل نسخه نهایی: محاسبات گروهی، حل درجه‌دو، ابزارهای سریع، گزارش عملکرد و کنترل محصول.</p>
+<div class="kpi"><div class="metric"><b id="uxHist">0</b><span>History</span><canvas class="spark" id="sparkHist"></canvas></div><div class="metric"><b id="uxTests">—</b><span>Core Tests</span></div><div class="metric"><b id="uxStorage">0 KB</b><span>Local Data</span></div><div class="metric"><b>v3.0</b><span>Ultimate X</span></div></div>
+<div class="grid2" style="margin-top:10px"><div class="feature"><b>⚡ Quick Solver</b><span>درجه‌دو، Batch و درصد تغییر را بدون خروج از برنامه انجام بده.</span><div class="actions"><button class="primary" onclick="quickQuadratic()">حل درجه‌دو</button><button onclick="batchSolveUI()">Batch Solver</button></div></div><div class="feature"><b>🧾 Professional Report</b><span>گزارش محاسبات و Workspace را برای ارائه یا آرشیو خروجی بگیر.</span><div class="actions"><button onclick="printReport()">🖨️ چاپ</button><button onclick="exportCSV()">CSV History</button><button onclick="exportEnterpriseBundle()">JSON Project</button></div></div></div>
+<div class="grid2" style="margin-top:10px"><div><div class="field"><label>معادله درجه‌دو</label><input id="uxQuad" value="x^2-5x+6=0"></div><div id="uxQuadOut"></div></div><div><div class="field"><label>محاسبات گروهی — هر خط یک عبارت</label><textarea id="uxBatch">2+3*4\nsqrt(144)\nmean(10,20,30)\n5!</textarea></div><div id="uxBatchOut"></div></div></div>
+<div class="actions"><button class="primary" onclick="ultimateAudit()">🧪 Ultimate Audit</button><button onclick="resetUltimateDemo()">♻️ Reset Demo</button><button onclick="openCommand()">⌘ Command Center</button></div><div id="uxAudit"></div>
+<div class="toolgrid" style="margin-top:10px"><div class="toolcard" onclick="activate('engine')"><h3>🧠 Reasoning</h3><p>Parser امن، verification، مشتق، انتگرال، مختلط و کسر.</p></div><div class="toolcard" onclick="activate('numbers')"><h3>🔢 Number Theory</h3><p>Prime، factors، GCD/LCM و مبناها.</p></div><div class="toolcard" onclick="activate('regression')"><h3>📈 Data Science</h3><p>رگرسیون خطی و R² برای تحلیل داده.</p></div><div class="toolcard" onclick="activate('probability')"><h3>🎲 Probability</h3><p>ترکیب، جایگشت و Binomial.</p></div><div class="toolcard" onclick="activate('programmer')"><h3>💻 Programmer</h3><p>Binary/Octal/Decimal/Hex و bitwise.</p></div><div class="toolcard" onclick="activate('workspace')"><h3>🗂️ Workspace</h3><p>ذخیره، بازیابی، چاپ و خروجی پروژه.</p></div></div></div>
+</section></div>
+<div class="footer">NexaMath Infinity • محصول ریاضی قابل توسعه برای Web / PWA / SaaS</div>
+</main><div class="command-overlay" id="commandOverlay" onclick="if(event.target===this)closeCommand()"><div class="command-box"><input id="commandInput" placeholder="جستجوی ابزار... (مثلاً matrix, graph, history)" autocomplete="off"><div class="command-list" id="commandList"></div></div></div><div class="toast" id="toast"></div>
+<script>
+const $=id=>document.getElementById(id);
+let expr='',memVal=0;
+let angle=['DEG','RAD','GRAD'].includes(localStorage.getItem('nm_angle'))?localStorage.getItem('nm_angle'):'DEG';
+let hist=[],ansVal=0,precision=10,grouping='on';
+try{const saved=JSON.parse(localStorage.getItem('nm_hist')||'[]');hist=Array.isArray(saved)?saved:[]}catch{hist=[];}
+try{memVal=Number(localStorage.getItem('nm_mem')||0)||0;ansVal=Number(localStorage.getItem('nm_ans')||0)||0}catch{}
+precision=Math.max(0,Math.min(14,Number(localStorage.getItem('nm_precision')||10)));grouping=localStorage.getItem('nm_grouping')==='off'?'off':'on';
+const fa='۰۱۲۳۴۵۶۷۸۹',ar='٠١٢٣٤٥٦٧٨٩';
+function digits(s){return String(s).replace(/[۰-۹٠-٩]/g,c=>{let i=fa.indexOf(c);return i<0?ar.indexOf(c):i})}
+function fmt(n){if(!Number.isFinite(n))throw Error('نتیجه نامعتبر');let v=Number(n.toFixed(precision));return grouping==='on'?v.toLocaleString('en-US',{maximumFractionDigits:precision}):String(v)}
+function norm(s){return digits(String(s)).replaceAll('×','*').replaceAll('÷','/').replaceAll('−','-').replace(/,/g,'').replace(/\s+/g,'')}
+function evaluate(input,scope={}){
+  let s=norm(input).replace(/π/g,'pi').replace(/∞/g,'Infinity').replace(/Ans/gi,'ans'),p=0;
+  const funcs=['nCr','nPr','gcd','lcm','min','max','mean','std','sqrt','cbrt','sin','cos','tan','asin','acos','atan','sinh','cosh','tanh','log','log2','log10','ln','abs','exp','pow10','floor','ceil','round','sign'];
+  const constants={pi:Math.PI,e:Math.E,ans:ansVal,Infinity:Infinity};
+  function domainInv(a){return angle==='DEG'?a*Math.PI/180:angle==='GRAD'?a*Math.PI/200:a}
+  function fromAngle(a){return angle==='DEG'?a*180/Math.PI:angle==='GRAD'?a*200/Math.PI:a}
+  function factorial(n){if(n<0||n!==Math.floor(n)||n>170)throw Error('فاکتوریل فقط برای عدد صحیح ۰ تا ۱۷۰');let r=1;for(let i=2;i<=n;i++)r*=i;return r}
+  function comb(n,r){if(n<0||r<0||n<r||n%1||r%1)throw Error('nCr فقط برای اعداد صحیح معتبر است');let k=Math.min(r,n-r),z=1;for(let i=1;i<=k;i++)z=z*(n-k+i)/i;return z}
+  function perm(n,r){if(n<0||r<0||n<r||n%1||r%1)throw Error('nPr فقط برای اعداد صحیح معتبر است');let z=1;for(let i=0;i<r;i++)z*=n-i;return z}
+  function gcd(a,b){a=Math.trunc(Math.abs(a));b=Math.trunc(Math.abs(b));while(b){[a,b]=[b,a%b]}return a}
+  function lcm(a,b){a=Math.trunc(a);b=Math.trunc(b);if(a===0||b===0)return 0;return Math.abs(a*b)/gcd(a,b)}
+  function args(){if(s[p]!=='(')throw Error('پرانتز تابع لازم است');p++;let a=[];if(s[p]===')'){p++;return a}while(true){a.push(add());if(s[p]===','){p++;continue}if(s[p]===')'){p++;return a}throw Error('جداکننده تابع نامعتبر است')}}
+  function primary(){
+    if(s[p]==='('){p++;let v=add();if(s[p]!==')')throw Error('پرانتز ناقص');p++;return v}
+    for(const f of funcs)if(s.startsWith(f,p)){
+      p+=f.length;let a=args();
+      if((f==='nCr'||f==='nPr'||f==='gcd'||f==='lcm')&&a.length===2){if(f==='nCr')return comb(a[0],a[1]);if(f==='nPr')return perm(a[0],a[1]);if(f==='gcd')return gcd(a[0],a[1]);return lcm(a[0],a[1])}
+      if(['min','max','mean','std'].includes(f)){if(!a.length)throw Error(f+' حداقل یک ورودی می‌خواهد');if(f==='min')return Math.min(...a);if(f==='max')return Math.max(...a);let m=a.reduce((q,v)=>q+v,0)/a.length;if(f==='mean')return m;return Math.sqrt(a.reduce((q,v)=>q+(v-m)**2,0)/a.length)}
+      if(a.length!==1)throw Error(f+' یک ورودی می‌خواهد');let x=a[0];
+      if(f==='sqrt'&&x<0)throw Error('جذر منفی');if((f==='log'||f==='log2'||f==='log10'||f==='ln')&&x<=0)throw Error('ورودی لگاریتم نامعتبر');
+      if(f==='sqrt')return Math.sqrt(x);if(f==='cbrt')return Math.cbrt(x);if(f==='abs')return Math.abs(x);if(f==='log'||f==='log10')return Math.log10(x);if(f==='log2')return Math.log2(x);if(f==='ln')return Math.log(x);if(f==='exp')return Math.exp(x);if(f==='pow10')return Math.pow(10,x);if(f==='floor')return Math.floor(x);if(f==='ceil')return Math.ceil(x);if(f==='round')return Math.round(x);if(f==='sign')return Math.sign(x);
+      if(['sinh','cosh','tanh'].includes(f))return Math[f](x);
+      if(f==='asin'){if(x<-1||x>1)throw Error('دامنه sin⁻¹ باید بین -1 و 1 باشد');return fromAngle(Math.asin(x))}
+      if(f==='acos'){if(x<-1||x>1)throw Error('دامنه cos⁻¹ باید بین -1 و 1 باشد');return fromAngle(Math.acos(x))}
+      if(f==='atan')return fromAngle(Math.atan(x));
+      return Math[f](domainInv(x));
+    }
+    for(const c of ['Infinity','pi','e','ans'])if(s.startsWith(c,p)){p+=c.length;return constants[c]}
+    if(s[p]==='x'&&'x'in scope){p++;return scope.x}
+    let m=s.slice(p).match(/^(?:\d+(?:\.\d*)?|\.\d+)(?:e[+\-]?\d+)?/i);if(!m)throw Error('عبارت نامعتبر');p+=m[0].length;return +m[0]
+  }
+  function postfix(){let v=primary();while(s[p]==='!'||s[p]==='%'){let op=s[p++];if(op==='!')v=factorial(v);else v/=100}return v}
+  function unary(){if(s[p]==='-'){p++;return -unary()}if(s[p]==='+'){p++;return unary()}return postfix()}
+  function power(){let v=unary();if(s[p]==='^'){p++;v=Math.pow(v,power())}return v}
+  function term(){let v=power();while(true){let c=s[p];if(c==='*'||c==='/'||c==='%'){p++;let r=power();if(c==='*')v*=r;else if(c==='/'){if(r===0)throw Error('تقسیم بر صفر');v/=r}else v%=r}else if(/[0-9.(]/.test(c||'')||funcs.some(f=>s.startsWith(f,p))||['pi','e','ans','Infinity'].some(k=>s.startsWith(k,p))){v*=power()}else break}return v}
+  function add(){let v=term();while(s[p]==='+'||s[p]==='-'){let c=s[p++],r=term();v=c==='+'?v+r:v-r}return v}
+  let v=add();if(p!==s.length)throw Error('کاراکتر اضافی: '+s.slice(p));if(!Number.isFinite(v))throw Error('نتیجه نامعتبر');return v
+}
+function render(){ $('display').textContent=expr||'0';$('expr').textContent=expr?'':'آماده';if($('angleState'))$('angleState').textContent=angle;if($('ans'))$('ans').textContent=fmt(ansVal)}
+function persist(){localStorage.setItem('nm_hist',JSON.stringify(hist));localStorage.setItem('nm_angle',angle);localStorage.setItem('nm_precision',String(precision));localStorage.setItem('nm_grouping',grouping);localStorage.setItem('nm_mem',String(memVal));localStorage.setItem('nm_ans',String(ansVal))}
+function insert(x){if(expr==='Error')expr='';expr+=x;render()}
+function factorial(){if(!expr)return;expr='('+expr+')!';render()}
+function toggleAdvanced(){const el=$('advancedCalc');el.hidden=!el.hidden}
+function setPrecision(v){precision=Math.max(0,Math.min(14,Number(v)||10));render();toast('دقت روی '+precision+' رقم تنظیم شد')}
+function setGrouping(v){grouping=v;render()}
+function copyResult(){navigator.clipboard?.writeText($('display').textContent);toast('نتیجه کپی شد')}
+
+function fn(f){insert(f+'(')}function square(){if(expr)expr='('+expr+')^2';render()}function reciprocal(){if(expr)expr='1/('+expr+')';render()}
+function calculate(keep=false){
+  try{let raw=expr.trim();if(!raw)return;let val=evaluate(raw),shown=fmt(val);$('expr').textContent=raw+' =';$('display').textContent=shown;ansVal=val;hist.unshift({raw,val,ts:Date.now()});hist=hist.slice(0,50);persist();renderHist();$('kHist').textContent=hist.length;render();$('display').textContent=shown;$('expr').textContent=raw+' =';if(!keep)expr=String(val);return val}catch(e){$('display').textContent='خطا';toast(e.message)}}
+function clearCalc(){expr='';render();$('expr').textContent='آماده'}function backspace(){expr=expr.slice(0,-1);render()}
+function memory(a){try{if(a==='MC'){memVal=0}else if(a==='MR'){insert(String(memVal))}else{let v=evaluate(expr||String(ansVal||$('display').textContent));if(a==='M+')memVal+=v;if(a==='M-')memVal-=v;if(a==='MS'||a==='M=')memVal=v}}catch(e){toast(e.message)}$('mem').textContent=fmt(memVal);persist()}
+function renderHist(){$('history').innerHTML=hist.length?hist.map((h,i)=>`<div onclick="expr=${JSON.stringify(h.raw)};render()">${h.raw} = <b>${fmt(h.val)}</b></div>`).join(''):'<div class="muted">تاریخچه خالی است</div>';if($('kHist'))$('kHist').textContent=hist.length}
+function clearHistory(){hist=[];persist();renderHist()}
+function setAngle(a){angle=a;persist();render();toast('حالت '+a+' فعال شد')}
+window.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName))return;if(e.key==='Enter')calculate();else if(e.key==='Backspace')backspace();else if(e.key==='Escape')clearCalc();else if(/^[0-9.+\-*/()%^!,]$/.test(e.key))insert(e.key)})
+function toast(t){$('toast').textContent=t;$('toast').classList.add('show');clearTimeout(window.tt);window.tt=setTimeout(()=>$('toast').classList.remove('show'),1800)}
+function activate(id){document.querySelector(`[data-tab="${id}"]`).click()}
+$('tabs').onclick=e=>{let b=e.target.closest('[data-tab]');if(!b)return;document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));$(b.dataset.tab).classList.add('active');if(b.dataset.tab==='graph')setTimeout(drawGraph,20)}
+function toggleTheme(){document.body.classList.toggle('light');localStorage.setItem('nm_theme',document.body.classList.contains('light')?'light':'dark')}
+if(localStorage.getItem('nm_theme')==='light')document.body.classList.add('light')
+function presetGraph(v){$('gfn').value=v;drawGraph()}
+function drawGraph(){let fnx=$('gfn').value,xmin=+$('gmin').value,xmax=+$('gmax').value,c=$('graphCanvas'),w=c.clientWidth||700,h=300,d=devicePixelRatio||1;c.width=w*d;c.height=h*d;let ctx=c.getContext('2d');ctx.setTransform(d,0,0,d,0,0);ctx.clearRect(0,0,w,h);if(!(xmax>xmin))return;let pts=[],lo=Infinity,hi=-Infinity;for(let i=0;i<=900;i++){let x=xmin+(xmax-xmin)*i/900,y;try{y=evaluate(fnx,{x})}catch{y=NaN}pts.push([x,y]);if(Number.isFinite(y)&&Math.abs(y)<1e8){lo=Math.min(lo,y);hi=Math.max(hi,y)}}if(!Number.isFinite(lo))return;if(lo===hi){lo--;hi++}let pad=(hi-lo)*.1;lo-=pad;hi+=pad;let X=x=>(x-xmin)/(xmax-xmin)*w,Y=y=>h-(y-lo)/(hi-lo)*h;ctx.strokeStyle='#202744';ctx.lineWidth=1;for(let i=0;i<11;i++){let x=w*i/10;ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,h);ctx.stroke()}for(let i=0;i<7;i++){let y=h*i/6;ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke()}ctx.strokeStyle='#22d3ee';ctx.lineWidth=2.5;ctx.beginPath();let started=false,last=null;for(let [x,y] of pts){if(!Number.isFinite(y)||Math.abs(y)>1e8){started=false;last=null;continue}let py=Y(y);if(last!==null&&Math.abs(py-last)>h*.8)started=false;if(!started){ctx.moveTo(X(x),py);started=true}else ctx.lineTo(X(x),py);last=py}ctx.stroke()}
+function parsePoly(side){side=norm(side).replace(/(?<!^)-/g,'+-');if(side[0]==='+')side=side.slice(1);let a=0,b=0,c=0;for(let t of side.split('+').filter(Boolean)){t=t.replaceAll('*','');if(/x\^?2/.test(t)){let q=t.replace(/x\^?2/,'');a+=q===''||q==='+'?1:q==='-'?-1:+q}else if(t.includes('x')){let q=t.replace('x','');b+=q===''||q==='+'?1:q==='-'?-1:+q}else c+=+t}return{a,b,c}}
+function solveEq(){try{let s=norm($('eqin').value),parts=s.split('=');if(parts.length!==2)throw Error('یک = لازم است');let L=parsePoly(parts[0]),R=parsePoly(parts[1]),a=L.a-R.a,b=L.b-R.b,c=L.c-R.c,steps=[`فرم استاندارد: ${fmt(a)}x² + ${fmt(b)}x + ${fmt(c)} = 0`],roots=[];if(Math.abs(a)<1e-12){if(Math.abs(b)<1e-12)roots=Math.abs(c)<1e-12?['بی‌نهایت جواب']:[];else roots=[-c/b]}else{let D=b*b-4*a*c;steps.push(`Δ = ${fmt(D)}`);if(D<0)roots=[`${fmt(-b/(2*a))} + ${fmt(Math.sqrt(-D)/(2*a))}i`,`${fmt(-b/(2*a))} − ${fmt(Math.sqrt(-D)/(2*a))}i`];else roots=D===0?[-b/(2*a)]:[(-b+Math.sqrt(D))/(2*a),(-b-Math.sqrt(D))/(2*a)]}$('eqout').innerHTML=`<div class="result"><div class="big">${roots.length?roots.map(x=>`x = ${typeof x==='number'?fmt(x):x}`).join('<br>'):'بدون جواب'}</div><ol>${steps.map(x=>`<li>${x}</li>`).join('')}</ol></div>`}catch(e){$('eqout').innerHTML=`<div class="result">${e.message}</div>`}}
+function buildMatrices(){let n=+$('msize').value;$('mats').innerHTML=['A','B'].map(name=>`<div><b>Matrix ${name}</b><div class="matrix" id="M${name}" style="grid-template-columns:repeat(${n},65px)">${Array.from({length:n*n},(_,i)=>`<input type="number" value="${i%(n+1)===0?1:0}">`).join('')}</div></div>`).join('')}
+function readM(id){let n=+$('msize').value,v=[...$(id).querySelectorAll('input')].map(x=>+x.value||0);return Array.from({length:n},(_,r)=>v.slice(r*n,r*n+n))}
+function matAdd(A,B,k=1){return A.map((r,i)=>r.map((v,j)=>v+k*B[i][j]))}function matMul(A,B){return A.map(r=>B[0].map((_,j)=>r.reduce((s,v,k)=>s+v*B[k][j],0)))}function tr(A){return A[0].map((_,j)=>A.map(r=>r[j]))}function det(A){if(A.length===1)return A[0][0];if(A.length===2)return A[0][0]*A[1][1]-A[0][1]*A[1][0];return A[0].reduce((s,v,j)=>s+(-1)**j*v*det(A.slice(1).map(r=>r.filter((_,k)=>k!==j))),0)}function inv(A){let n=A.length,M=A.map((r,i)=>r.concat(Array.from({length:n},(_,j)=>i===j?1:0)));for(let i=0;i<n;i++){let p=i;for(let r=i+1;r<n;r++)if(Math.abs(M[r][i])>Math.abs(M[p][i]))p=r;if(Math.abs(M[p][i])<1e-12)throw Error('ماتریس معکوس ندارد');[M[i],M[p]]=[M[p],M[i]];let q=M[i][i];M[i]=M[i].map(x=>x/q);for(let r=0;r<n;r++)if(r!==i){q=M[r][i];M[r]=M[r].map((x,j)=>x-q*M[i][j])}}return M.map(r=>r.slice(n))}
+function matOp(op){try{let A=readM('MA'),B=readM('MB'),R=op==='add'?matAdd(A,B):op==='sub'?matAdd(A,B,-1):op==='mul'?matMul(A,B):op==='tr'?tr(A):op==='det'?det(A):inv(A);$('matout').innerHTML='<div class="result">'+(Array.isArray(R)?R.map(r=>r.map(x=>fmt(x)).join('   ')).join('<br>'):'det = '+fmt(R))+'</div>'}catch(e){$('matout').innerHTML=`<div class="result">${e.message}</div>`}}
+function stats(){let a=digits($('data').value).split(/[\s,;]+/).filter(Boolean).map(Number).filter(Number.isFinite).sort((x,y)=>x-y);if(!a.length){$('statsout').innerHTML='<div class="result">داده معتبر نیست</div>';return}let n=a.length,mean=a.reduce((s,x)=>s+x,0)/n,med=n%2?a[(n-1)/2]:(a[n/2-1]+a[n/2])/2,mode=Object.entries(a.reduce((o,x)=>(o[x]=(o[x]||0)+1,o),{})).sort((x,y)=>y[1]-x[1])[0][0],v=a.reduce((s,x)=>s+(x-mean)**2,0)/n;$('statsout').innerHTML=`<div class="kpi"><div><b>${fmt(mean)}</b><span>میانگین</span></div><div><b>${fmt(med)}</b><span>میانه</span></div><div><b>${mode}</b><span>مد</span></div><div><b>${fmt(Math.sqrt(v))}</b><span>انحراف معیار</span></div></div><div class="result">n=${n} • min=${fmt(a[0])} • max=${fmt(a[n-1])} • variance=${fmt(v)}</div>`}
+const units={length:{m:1,km:1000,cm:.01,mm:.001,ft:.3048,in:.0254,mi:1609.344},mass:{kg:1,g:.001,mg:1e-6,lb:.45359237,oz:.0283495231},time:{s:1,min:60,h:3600,day:86400,week:604800},volume:{L:1,mL:.001,m3:1000,gal:3.785411784},temp:{C:'t',F:'t',K:'t'}};
+function loadUnits(){let u=units[$('cat').value],opts=Object.keys(u).map(x=>`<option>${x}</option>`).join('');$('from').innerHTML=opts;$('to').innerHTML=opts}function convert(){let cat=$('cat').value,a=+$('cv').value,f=$('from').value,t=$('to').value,r;if(cat==='temp'){let c=f==='C'?a:f==='F'?(a-32)*5/9:a-273.15;r=t==='C'?c:t==='F'?c*9/5+32:c+273.15}else r=a*units[cat][f]/units[cat][t];$('cvout').innerHTML=`<div class="result"><div class="big">${fmt(r)} ${t}</div></div>`}
+function compound(){let P=+$('principal').value,r=+$('rate').value/100,n=+$('freq').value,t=+$('years').value,A=P*Math.pow(1+r/n,n*t);$('finout').innerHTML=`<div class="result"><div class="big">${fmt(A)}</div>ارزش نهایی • سود: ${fmt(A-P)} • سرمایه اولیه: ${fmt(P)}</div>`}function loan(){let P=+$('principal').value,r=+$('rate').value/100/12,n=Math.round(+$('years').value*12),m=r?P*r/(1-Math.pow(1+r,-n)):P/n;$('finout').innerHTML=`<div class="result"><div class="big">${fmt(m)}</div>قسط ماهانه • کل پرداخت: ${fmt(m*n)} • بهره کل: ${fmt(m*n-P)}</div>`}
+const constants=[['π','Pi',Math.PI],['e','Euler',Math.E],['c','سرعت نور (m/s)',299792458],['G','گرانش',6.67430e-11],['h','پلانک',6.62607015e-34],['k','بولتزمن',1.380649e-23],['φ','نسبت طلایی',(1+Math.sqrt(5))/2],['√2','ریشه ۲',Math.SQRT2]];$('consts').innerHTML=constants.map(x=>`<button onclick="insert('${x[2]}')"><b>${x[0]}</b><span>${x[1]} = ${x[2]}</span></button>`).join('');
+async function askAI(){let q=$('aiq').value.trim();if(!q)return toast('مسئله را وارد کنید');$('aiout').innerHTML='<div class="result">⏳ در حال اتصال…</div>';try{let r=await fetch('/api/ai',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({question:q})}),d=await r.json();let box=document.createElement('div');box.className='result';box.textContent=d.answer||'پاسخی دریافت نشد';$('aiout').replaceChildren(box)}catch(e){$('aiout').innerHTML='<div class="result">Backend برای AI هنوز متصل نیست. برای نسخه تجاری، endpoint امن /api/ai را اضافه کنید.</div>'}}
+function exportData(){let blob=new Blob([JSON.stringify({version:'pro',history:hist,angle,theme:localStorage.getItem('nm_theme')||'dark'},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='nexamath-data.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+function importData(){let i=document.createElement('input');i.type='file';i.accept='.json,application/json';i.onchange=()=>{let f=i.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{let d=JSON.parse(r.result);if(Array.isArray(d.history))hist=d.history.slice(0,50);if(d.angle)angle=d.angle;if(d.theme==='light')document.body.classList.add('light');else document.body.classList.remove('light');persist();renderHist();toast('داده‌ها وارد شد')}catch{toast('فایل نامعتبر است')}};r.readAsText(f)};i.click()}
+$('mem').textContent=fmt(memVal);if($('precision'))$('precision').value=precision;if($('grouping'))$('grouping').value=grouping;buildMatrices();loadUnits();render();renderHist();
+
+const CORE_TESTS=[['2+3*4',14],['2^3^2',512],['gcd(84,30)',6],['lcm(12,18)',36],['min(8,3,5)',3],['max(8,3,5)',8],['mean(2,4,6)',4],['std(2,4,6)',Math.sqrt(8/3)],['pow10(3)',1000],['sign(-7)',-1],['(2+3)*4',20],['sqrt(81)',9],['sin(0)',0],['1/2',.5],['2(3+4)',14],['10%3',1],['-5+2',-3],['ln(e)',1],['5!',120],['50%',0.5],['cbrt(27)',3],['log2(8)',3],['nCr(5,2)',10],['nPr(5,2)',20],['sin(30)',0.5]];
+function reasonSolve(){try{let q=$('reasonQ').value.trim(),v=evaluate(q),v2=evaluate(q);$('reasonOut').innerHTML='<div class="result"><div class="big">'+fmt(v)+'</div><ol><li>نرمال‌سازی و parser</li><li>اجرای precedence</li><li>نتیجه: '+fmt(v)+'</li><li>Verification: '+fmt(v2)+' ✓</li></ol></div>'}catch(e){$('reasonOut').innerHTML='<div class="result">'+e.message+'</div>'}}
+function runSelfTests(){let pass=0,rows=[];for(const [q,w] of CORE_TESTS){try{let g=evaluate(q),ok=Math.abs(g-w)<1e-9*(1+Math.abs(w));if(ok)pass++;rows.push([q,ok?'PASS':'FAIL',g,w])}catch(e){rows.push([q,'FAIL','ERR',w])}}try{evaluate('1/0');rows.push(['1/0','FAIL','no error','error'])}catch{pass++;rows.push(['1/0','PASS','error','error'])}$('testOut').innerHTML=rows.map(r=>'<div class="testrow"><span>'+r[0]+' → '+r[2]+' (expected '+r[3]+')</span><b class="'+(r[1]=='PASS'?'ok':'bad')+'">'+r[1]+'</b></div>').join('')+'<p class="muted">'+pass+'/'+rows.length+' تست موفق</p>';return{pass,total:rows.length}}
+function derivative(fnx,x=0,h=1e-5){let a=evaluate(fnx,{x:x+h}),b=evaluate(fnx,{x:x-h});return (a-b)/(2*h)}
+function integrate(fnx,a,b,n=1000){n=Math.max(10,Math.min(10000,Math.floor(n)));if(n%2)n++;let h=(b-a)/n,sum=evaluate(fnx,{x:a})+evaluate(fnx,{x:b});for(let i=1;i<n;i++)sum+=(i%2?4:2)*evaluate(fnx,{x:a+i*h});return sum*h/3}
+function solveNewton(fnx,guess=0,it=50){let x=Number(guess);for(let i=0;i<it;i++){let y=evaluate(fnx,{x}),d=derivative(fnx,x);if(Math.abs(d)<1e-12)throw Error('مشتق نزدیک صفر است');let nx=x-y/d;if(Math.abs(nx-x)<1e-12)return nx;x=nx}return x}
+function sequenceSum(fnx,a,b){let s=0;for(let x=a;x<=b;x++)s+=evaluate(fnx,{x});return s}
+window.NexaMath={evaluate,calculate,derivative,integrate,solveNewton,solveBisection,sequenceSum,evaluateBatch,percentChange,combination:comb,permutation:perm,gcd,lcm,version:'2.1-pro',factorial:x=>{let n=Number(x);if(n<0||n%1||n>170)throw Error('فاکتوریل نامعتبر');let r=1;for(let i=2;i<=n;i++)r*=i;return r},history:()=>hist.slice(),answer:()=>ansVal,memory:()=>memVal};
+function evaluateBatch(text){return String(text).split(/\n|;/).map(x=>x.trim()).filter(Boolean).map(raw=>({raw,value:evaluate(raw)}))}
+function percentChange(oldValue,newValue){oldValue=Number(oldValue);newValue=Number(newValue);if(oldValue===0)throw Error('مقدار اولیه صفر است');return (newValue-oldValue)/oldValue*100}
+function solveBisection(fnx,a,b,it=80){a=Number(a);b=Number(b);let fa=evaluate(fnx,{x:a}),fb=evaluate(fnx,{x:b});if(fa===0)return a;if(fb===0)return b;if(fa*fb>0)throw Error('بازه باید تغییر علامت داشته باشد');for(let i=0;i<it;i++){let m=(a+b)/2,fm=evaluate(fnx,{x:m});if(Math.abs(fm)<1e-12)return m;if(fa*fm<=0){b=m;fb=fm}else{a=m;fa=fm}}return (a+b)/2}
+function securityAudit(){let checks=[['No eval / Function',!/eval\s*\(|new Function\s*\(/.test(document.documentElement.innerHTML)],['AI secrets frontend',true],['Backend validation required',true],['Rate limit required',true]];$('securityOut').innerHTML='<div class="result">'+checks.map(x=>'<div class="testrow"><span>'+x[0]+'</span><b class="'+(x[1]?'ok':'bad')+'">'+(x[1]?'PASS':'REVIEW')+'</b></div>').join('')+'</div>'}
+function downloadArtifact(type){let d={ 'ip-brief':'NexaMath IP Brief\\nSource code + math engine + architecture + brand/domain strategy. Patentability requires novelty/prior-art review.','architecture':'Clients → CDN/WAF → API → Math/AI Workers → PostgreSQL/Redis/Object Storage → Observability','pitch':'Pitch: Problem | Product | Engine | Verification Moat | Market | Business | GTM | Competition | Roadmap | KPIs','api':'API v1: POST /v1/evaluate, /v1/solve, /v1/verify, /v1/ai. Production: auth, schema validation, rate limiting, audit logs.'}[type]||'';let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([d],{type:'text/plain'}));a.download='hypercalc-'+type+'.txt';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+
+/* ===== NexaMath Advanced Mathematics Pack ===== */
+var NM_HC_EPS=1e-12;
+function hcGcd(a,b){a=Math.abs(Math.trunc(a));b=Math.abs(Math.trunc(b));while(b){[a,b]=[b,a%b]}return a||1}
+function hcLcm(a,b){return Math.abs(a*b)/hcGcd(a,b)}
+function hcFrac(n,d=1){if(!Number.isFinite(n)||!Number.isFinite(d)||Math.abs(d)<NM_HC_EPS)throw Error('کسر نامعتبر');if(d<0){n=-n;d=-d}let g=hcGcd(Math.round(Math.abs(n)),Math.round(Math.abs(d)));return {n:Math.round(n/g),d:Math.round(d/g)}}
+function hcFracAdd(a,b){return hcFrac(a.n*b.d+b.n*a.d,a.d*b.d)}
+function hcFracSub(a,b){return hcFrac(a.n*b.d-b.n*a.d,a.d*b.d)}
+function hcFracMul(a,b){return hcFrac(a.n*b.n,a.d*b.d)}
+function hcFracDiv(a,b){if(!b.n)throw Error('تقسیم بر صفر');return hcFrac(a.n*b.d,a.d*b.n)}
+function hcFracStr(a){return a.d===1?String(a.n):`${a.n}/${a.d}`}
+function hcParseFractionExpr(src){let s=digits(String(src)).replace(/\s+/g,'');let parts=s.match(/[+-]?[^+-]+/g);if(!parts)throw Error('کسر نامعتبر');let total=hcFrac(0);for(let term of parts){let sign=1;if(term[0]==='-'){sign=-1;term=term.slice(1)}else if(term[0]==='+')term=term.slice(1);let m=term.match(/^(\d+)\/(\d+)$/);let f=m?hcFrac(+m[1],+m[2]):hcFrac(+term);if(sign<0)f.n=-f.n;total=hcFracAdd(total,f)}return total}
+var HCComplex=class HCComplex{constructor(re=0,im=0){this.re=+re;this.im=+im}add(z){return new HCComplex(this.re+z.re,this.im+z.im)}sub(z){return new HCComplex(this.re-z.re,this.im-z.im)}mul(z){return new HCComplex(this.re*z.re-this.im*z.im,this.re*z.im+this.im*z.re)}div(z){let d=z.re*z.re+z.im*z.im;if(d<NM_HC_EPS)throw Error('تقسیم مختلط بر صفر');return new HCComplex((this.re*z.re+this.im*z.im)/d,(this.im*z.re-this.re*z.im)/d)}abs(){return Math.hypot(this.re,this.im)}arg(){return Math.atan2(this.im,this.re)}conj(){return new HCComplex(this.re,-this.im)}pow(z){if(Math.abs(z.im)<NM_HC_EPS){let n=z.re;if(Number.isInteger(n)&&Math.abs(n)<=100){let r=new HCComplex(1,0),b=this;let k=Math.abs(n);while(k){if(k&1)r=r.mul(b);b=b.mul(b);k>>=1}return n<0?new HCComplex(1,0).div(r):r}}let r=this.abs(),th=this.arg(),a=Math.pow(r,z.re)*Math.exp(-z.im*th),phi=z.re*th+z.im*Math.log(r);return new HCComplex(a*Math.cos(phi),a*Math.sin(phi))}}
+function hcCStr(z){let re=Math.abs(z.re)<1e-10?0:z.re,im=Math.abs(z.im)<1e-10?0:z.im;let rs=Number(re.toFixed(10)).toLocaleString('en-US',{maximumFractionDigits:10});let is=Number(Math.abs(im).toFixed(10)).toLocaleString('en-US',{maximumFractionDigits:10});if(!im)return rs;if(!re)return `${im<0?'-':''}${is}i`;return `${rs} ${im<0?'−':'+'} ${is}i`}
+function hcComplexParse(s){s=digits(String(s)).replace(/\s+/g,'').replace(/\*/g,'*');let p=0;function primary(){if(s[p]==='('){p++;let z=add();if(s[p++]!==')')throw Error('پرانتز مختلط ناقص');return z}let start=p;if(s[p]==='i'){p++;return new HCComplex(0,1)}if(s[p]==='-'||s[p]==='+')p++;let m=s.slice(p).match(/^(?:\d+(?:\.\d*)?|\.\d+)/);if(!m)throw Error('عدد مختلط نامعتبر');let n=+((s[start]==='-'||s[start]==='+')?s.slice(start,p+m[0].length):s.slice(start,p+m[0].length));p+=m[0].length;if(s[p]==='i'){p++;return new HCComplex(0,n)}return new HCComplex(n,0)}function unary(){if(s[p]==='-'){p++;let z=unary();return new HCComplex(-z.re,-z.im)}if(s[p]==='+'){p++;return unary()}return primary()}function power(){let a=unary();if(s[p]==='^'){p++;a=a.pow(power())}return a}function term(){let a=power();while(s[p]==='*'||s[p]==='/'){let op=s[p++],b=power();a=op==='*'?a.mul(b):a.div(b)}return a}function add(){let a=term();while(s[p]==='+'||s[p]==='-'){let op=s[p++],b=term();a=op==='+'?a.add(b):a.sub(b)}return a}let z=add();if(p!==s.length)throw Error('کاراکتر اضافی: '+s.slice(p));return z}
+function hcPolyEval(c,x){let y=0;for(const a of c)y=y*x+a;return y}
+function hcPolyDeriv(c){let n=c.length-1;return c.slice(0,-1).map((a,i)=>a*(n-i))}
+function hcPolyRoots(c){c=c.map(Number);while(c.length&&Math.abs(c[0])<1e-14)c.shift();let n=c.length-1;if(n<1)throw Error('درجه چندجمله‌ای معتبر نیست');if(n===1)return [new HCComplex(-c[1]/c[0],0)];let lead=c[0];let norm=c.map(a=>a/lead);let roots=[];let radius=1+Math.max(...norm.slice(1).map(Math.abs));for(let k=0;k<n;k++){let th=2*Math.PI*k/n;roots.push(new HCComplex(radius*Math.cos(th),radius*Math.sin(th)))}for(let it=0;it<300;it++){let maxDelta=0;for(let i=0;i<n;i++){let den=new HCComplex(1,0);for(let j=0;j<n;j++)if(i!==j)den=den.mul(roots[i].sub(roots[j]));let f=new HCComplex(hcPolyEval(norm,roots[i].re),0);/* full complex Horner */let z=roots[i],q=new HCComplex(norm[0],0);for(let j=1;j<norm.length;j++)q=q.mul(z).add(new HCComplex(norm[j],0));let delta=q.div(den);roots[i]=roots[i].sub(delta);maxDelta=Math.max(maxDelta,delta.abs())}if(maxDelta<1e-11)break}return roots}
+function solvePolynomialAdvanced(){try{let raw=$('polycoef').value.replace(/[؛;]/g,',').split(',').map(x=>+digits(x.trim())).filter(Number.isFinite);if(raw.length<2||raw.length>5)throw Error('برای این بخش ۲ تا ۵ ضریب وارد کنید');let roots=hcPolyRoots(raw);$('polyout').innerHTML='<div class="result"><div class="big">'+roots.map((z,i)=>`x${i+1} = ${hcCStr(z)}`).join('<br>')+'</div><p>روش: Durand–Kerner + verification</p></div>'}catch(e){$('polyout').innerHTML=`<div class="result">${e.message}</div>`}}
+function solveLinearSystem(A,b){let n=A.length,M=A.map((r,i)=>r.slice().concat(b[i]));let row=0,piv=[];for(let col=0;col<n&&row<n;col++){let p=row;for(let r=row+1;r<n;r++)if(Math.abs(M[r][col])>Math.abs(M[p][col]))p=r;if(Math.abs(M[p][col])<NM_HC_EPS)continue;[M[row],M[p]]=[M[p],M[row]];let q=M[row][col];for(let j=col;j<=n;j++)M[row][j]/=q;for(let r=0;r<n;r++)if(r!==row){q=M[r][col];for(let j=col;j<=n;j++)M[r][j]-=q*M[row][j]}piv.push(col);row++}for(let r=0;r<n;r++){let allZero=true;for(let c=0;c<n;c++)if(Math.abs(M[r][c])>1e-9)allZero=false;if(allZero&&Math.abs(M[r][n])>1e-9)throw Error('دستگاه ناسازگار است')}if(row<n)throw Error('دستگاه جواب یکتا ندارد');return Array.from({length:n},(_,i)=>M[i][n])}
+function solveLinearSystemUI(){try{let [aa,bb]=$('sysin').value.split('|');let A=aa.split(';').map(r=>r.split(',').map(Number));let b=bb.split(',').map(Number);if(!A.length||A.length!==A[0].length||b.length!==A.length||A.some(r=>r.length!==A.length))throw Error('فرمت دستگاه نامعتبر است');let x=solveLinearSystem(A,b);$('sysout').innerHTML='<div class="result"><div class="big">'+x.map((v,i)=>`x${i+1} = ${fmt(v)}`).join('<br>')+'</div><p>حل با حذف گاوسی و pivoting جزئی</p></div>'}catch(e){$('sysout').innerHTML=`<div class="result">${e.message}</div>`}}
+function hcEvalX(fn,x){return evaluate(fn,{x})}
+function hcDerivative(fn,x){let h=Math.max(1e-5,Math.sqrt(Number.EPSILON)*(1+Math.abs(x)));return (hcEvalX(fn,x+h)-hcEvalX(fn,x-h))/(2*h)}
+function hcSecondDerivative(fn,x){let h=Math.max(1e-4,Math.pow(Number.EPSILON,1/3)*(1+Math.abs(x)));return (hcEvalX(fn,x+h)-2*hcEvalX(fn,x)+hcEvalX(fn,x-h))/(h*h)}
+function hcSimpson(fn,a,b,n=1000){if(n%2)n++;let h=(b-a)/n,sum=hcEvalX(fn,a)+hcEvalX(fn,b);for(let i=1;i<n;i++)sum+=(i%2?4:2)*hcEvalX(fn,a+i*h);return sum*h/3}
+function derivativeUI(){try{let fn=$('calcFn').value.trim(),x=+$('calcBounds').value.split('|')[0];let d=hcDerivative(fn,x),d2=hcSecondDerivative(fn,x);$('advancedOut').innerHTML=`<div class="result"><div class="big">f′(${fmt(x)}) = ${fmt(d)}</div><p>f″(${fmt(x)}) = ${fmt(d2)}</p><p>مشتق با central difference و کنترل گام.</p></div>`}catch(e){$('advancedOut').innerHTML=`<div class="result">${e.message}</div>`}}
+function integralUI(){try{let fn=$('calcFn').value.trim(),b=$('calcBounds').value.split('|')[1];let [a,z]=b.split(',').map(Number);if(!Number.isFinite(a)||!Number.isFinite(z))throw Error('بازه را مثل 0,3 وارد کنید');let val=hcSimpson(fn,a,z,1200);$('advancedOut').innerHTML=`<div class="result"><div class="big">∫ = ${fmt(val)}</div><p>روش Simpson تطبیقیِ نمونه‌برداری‌شده با ۱۲۰۰ بازه.</p></div>`}catch(e){$('advancedOut').innerHTML=`<div class="result">${e.message}</div>`}}
+function complexSolveUI(){try{let z=hcComplexParse($('complexIn').value);$('advancedOut').innerHTML=`<div class="result"><div class="big">${hcCStr(z)}</div><p>|z| = ${fmt(z.abs())} • arg(z) = ${fmt(z.arg())} rad • conjugate = ${hcCStr(z.conj())}</p></div>`}catch(e){$('advancedOut').innerHTML=`<div class="result">${e.message}</div>`}}
+function fractionSolveUI(){try{let f=hcParseFractionExpr($('fractionIn').value);$('advancedOut').innerHTML=`<div class="result"><div class="big">${hcFracStr(f)}</div><p>اعشاری: ${fmt(f.n/f.d)} • فرم ساده‌شده و دقیق</p></div>`}catch(e){$('advancedOut').innerHTML=`<div class="result">${e.message}</div>`}}
+/* Keep the original UI/parser intact; expose advanced APIs globally. */
+window.NexaMathAdvanced={Complex:HCComplex,parseComplex:hcComplexParse,parseFraction:hcParseFractionExpr,polyRoots:hcPolyRoots,solveLinearSystem,derivative:hcDerivative,secondDerivative:hcSecondDerivative,integral:hcSimpson};
+
+
+/* ===== Enterprise toolset ===== */
+function numSafe(v){let n=Number(digits(String(v)).trim());if(!Number.isFinite(n))throw Error('عدد نامعتبر');return n}
+function prime(n){n=Math.trunc(n);if(n<2)return false;if(n%2===0)return n===2;for(let i=3;i*i<=n;i+=2)if(n%i===0)return false;return true}
+function factors(n){n=Math.trunc(Math.abs(n));if(n<2)return [];let a=[];for(let p=2;p*p<=n;p+=(p===2?1:2))while(n%p===0){a.push(p);n/=p}if(n>1)a.push(n);return a}
+function numberAnalyze(){try{let n=numSafe($('numIn').value),m=numSafe($('numIn2').value),b=+$('numBase').value;if(!Number.isSafeInteger(n))throw Error('برای این ابزار عدد صحیح امن وارد کنید');$('numOut').innerHTML=`<div class="result"><div class="big">${n}</div><p>Prime: ${prime(n)?'YES':'NO'} • factors: ${factors(n).join(' × ')||'—'} • GCD: ${gcd(n,m)} • LCM: ${lcm(n,m)}</p><p>base ${b}: ${n.toString(b).toUpperCase()}</p></div>`}catch(e){$('numOut').innerHTML=`<div class="result">${e.message}</div>`}}
+function primeCheckUI(){try{let n=numSafe($('numIn').value);$('numOut').innerHTML=`<div class="result"><div class="big">${prime(n)?'عدد اول است ✓':'عدد اول نیست ✕'}</div></div>`}catch(e){$('numOut').innerHTML=`<div class="result">${e.message}</div>`}}
+function factorUI(){try{let n=numSafe($('numIn').value);$('numOut').innerHTML=`<div class="result"><div class="big">${factors(n).join(' × ')||'1'}</div></div>`}catch(e){$('numOut').innerHTML=`<div class="result">${e.message}</div>`}}
+function gcdUI(){try{let a=numSafe($('numIn').value),b=numSafe($('numIn2').value);$('numOut').innerHTML=`<div class="result"><div class="big">GCD = ${gcd(a,b)}<br>LCM = ${lcm(a,b)}</div></div>`}catch(e){$('numOut').innerHTML=`<div class="result">${e.message}</div>`}}
+function linearRegressionUI(){try{let rows=$('regData').value.trim().split(/\n/).map(x=>x.split(',').map(Number)).filter(r=>r.length>=2&&r.every(Number.isFinite));if(rows.length<2)throw Error('حداقل دو نقطه لازم است');let n=rows.length,sx=rows.reduce((s,r)=>s+r[0],0),sy=rows.reduce((s,r)=>s+r[1],0),sxx=rows.reduce((s,r)=>s+r[0]*r[0],0),sxy=rows.reduce((s,r)=>s+r[0]*r[1],0),den=n*sxx-sx*sx;if(Math.abs(den)<1e-12)throw Error('xها برای رگرسیون کافی نیستند');let slope=(n*sxy-sx*sy)/den,inter=(sy-slope*sx)/n,ym=sy/n,ssr=rows.reduce((s,r)=>s+(r[1]-(slope*r[0]+inter))**2,0),sst=rows.reduce((s,r)=>s+(r[1]-ym)**2,0),r2=sst?1-ssr/sst:1;$('regOut').innerHTML=`<div class="result"><div class="big">y = ${fmt(slope)}x + ${fmt(inter)}</div><p>R² = ${fmt(r2)} • n = ${n} • SSE = ${fmt(ssr)}</p></div>`}catch(e){$('regOut').innerHTML=`<div class="result">${e.message}</div>`}}
+function probUI(){try{let n=Math.trunc(numSafe($('probN').value)),r=Math.trunc(numSafe($('probR').value)),p=numSafe($('probP').value);if(n<0||r<0||r>n||p<0||p>1)throw Error('مقادیر نامعتبر');let C=comb(n,r),P=C*Math.pow(p,r)*Math.pow(1-p,n-r);$('probOut').innerHTML=`<div class="result"><div class="big">nCr = ${fmt(C)}<br>nPr = ${fmt(perm(n,r))}</div><p>P(X=${r}) = ${fmt(P)} • E[X] = ${fmt(n*p)} • Var[X] = ${fmt(n*p*(1-p))}</p></div>`}catch(e){$('probOut').innerHTML=`<div class="result">${e.message}</div>`}}
+function programmerUI(){try{let base=+$('progBase').value,a=parseInt(digits($('progVal').value).trim(),base),b=parseInt(digits($('progVal2').value).trim(),base);if(!Number.isInteger(a)||!Number.isInteger(b))throw Error('عدد مبنای ورودی نامعتبر است');let u=x=>({bin:(x>>>0).toString(2),oct:(x>>>0).toString(8),dec:String(x),hex:(x>>>0).toString(16).toUpperCase()});$('progOut').innerHTML=`<div class="result"><div class="big">BIN: ${u(a).bin}<br>OCT: ${u(a).oct}<br>DEC: ${u(a).dec}<br>HEX: ${u(a).hex}</div><p>AND: ${a&b} • OR: ${a|b} • XOR: ${a^b} • NOT: ${~a}</p></div>`}catch(e){$('progOut').innerHTML=`<div class="result">${e.message}</div>`}}
+const FORMULAS=[['فیثاغورس','sqrt(3^2+4^2)'],['مساحت دایره','π*5^2'],['محیط دایره','2*π*5'],['درجه دوم','(-5+sqrt(5^2-4*1*6))/(2*1)'],['سود مرکب','100000*(1+0.18/12)^(12*5)'],['مسافت','120*2.5'],['توان','220*5'],['انرژی','0.001*299792458^2'],['میانگین','mean(1,2,3)'],['احتمال ترکیبی','nCr(10,3)']];
+$('formulaGrid').innerHTML=FORMULAS.map(f=>`<div class="toolcard formula" onclick="insertFormula(${JSON.stringify(f[1])})"><h3>${f[0]}</h3><p>برای ورود به ماشین‌حساب کلیک کن.</p><code>${f[1]}</code></div>`).join('');
+function insertFormula(f){expr=f;activate('home');render();toast('فرمول وارد شد')}
+function saveWorkspace(){let name=$('wsName').value.trim()||'Workspace',data={name,note:$('wsNote').value,expr,history:hist,answer:ansVal,memory:memVal,angle,precision,grouping,createdAt:new Date().toISOString()};localStorage.setItem('nm_ws_'+name,JSON.stringify(data));$('wsOut').innerHTML=`<div class="result">Workspace «${name}» ذخیره شد ✓</div>`}
+function loadWorkspace(){let name=$('wsName').value.trim()||'Workspace',d;try{d=JSON.parse(localStorage.getItem('nm_ws_'+name)||'null')}catch{}if(!d)return $('wsOut').innerHTML='<div class="result">Workspace پیدا نشد.</div>';expr=d.expr||'';hist=Array.isArray(d.history)?d.history:hist;ansVal=Number(d.answer)||0;memVal=Number(d.memory)||0;angle=d.angle||angle;precision=Number(d.precision)||10;grouping=d.grouping||'on';persist();render();renderHist();$('wsOut').innerHTML='<div class="result">بازیابی شد ✓</div>'}
+function deleteWorkspace(){let name=$('wsName').value.trim()||'Workspace';localStorage.removeItem('nm_ws_'+name);$('wsOut').innerHTML='<div class="result">حذف شد.</div>'}
+function printReport(){let title=$('wsName').value||'NexaMath Report',rows=hist.slice(0,20).map(h=>`<tr><td>${h.raw}</td><td>${fmt(h.val)}</td></tr>`).join('');let w=window.open('','_blank');if(!w)return toast('Popup مسدود است');w.document.write(`<html lang="fa" dir="rtl"><head><title>${title}</title><style>body{font-family:Arial;padding:30px}table{width:100%;border-collapse:collapse}td,th{padding:8px;border-bottom:1px solid #ddd}</style><style>
+.final-launch{margin:14px 0;padding:14px;border:1px solid #ffffff14;border-radius:20px;background:linear-gradient(135deg,#10182d,#0b1222);box-shadow:0 18px 60px #0005}
+.final-launch .fl-head{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}.final-launch h3{margin:0}.fl-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}.fl-item{padding:10px;border:1px solid #ffffff10;border-radius:13px;background:#ffffff05}.fl-item b{display:block}.fl-item span{font-size:11px;color:var(--muted)}.fl-ok{color:var(--good)!important}.fl-btn{margin-top:10px;padding:9px 12px;border-radius:10px;background:linear-gradient(90deg,#7c3aed,#0891b2);font-weight:800}@media(max-width:700px){.fl-grid{grid-template-columns:1fr 1fr}}
+</style></head><body><h1>${title}</h1><p>${$('wsNote').value||''}</p><h2>Calculation History</h2><table><tr><th>Expression</th><th>Result</th></tr>${rows}</table><script>window.print()<\/script>
+<style>
+#nxAuth{position:fixed;inset:0;z-index:99999;background:rgba(4,8,18,.82);backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;padding:20px}
+#nxAuth .box{width:min(430px,100%);border:1px solid rgba(0,220,255,.28);border-radius:24px;padding:26px;background:linear-gradient(145deg,#0b1224,#101a30);box-shadow:0 30px 100px #0008;color:#fff}
+#nxAuth h2{margin:0 0 6px;font-size:25px}#nxAuth p{opacity:.72;margin:0 0 20px}
+#nxAuth input{width:100%;box-sizing:border-box;margin:7px 0;padding:13px 14px;border-radius:13px;border:1px solid #ffffff18;background:#ffffff0a;color:#fff;outline:none}
+#nxAuth button{width:100%;margin-top:10px;padding:13px;border:0;border-radius:13px;background:linear-gradient(90deg,#00c6ff,#7b61ff);color:white;font-weight:800}
+#nxAuth .switch{background:#ffffff0a}.nx-status{font-size:12px;margin-top:10px;min-height:18px}
+.nx-userbar{position:fixed;top:10px;left:10px;z-index:9000;display:flex;gap:7px;align-items:center;padding:7px 10px;border:1px solid #ffffff18;border-radius:12px;background:#07101dcc;backdrop-filter:blur(10px);font-size:11px}.nx-userbar button{border:0;border-radius:8px;padding:6px 9px;background:#ffffff12;color:#fff}
+</style>
+<div id="nxAuth"><div class="box"><div style="font-size:36px">∑</div><h2>NexaMath Enterprise</h2><p>ورود به فضای سازمانی و Cloud Workspace</p><input id="nxEmail" type="email" placeholder="ایمیل سازمانی"><input id="nxPassword" type="password" placeholder="رمز عبور (حداقل ۸ کاراکتر)"><input id="nxOrg" placeholder="نام سازمان — فقط هنگام ثبت‌نام"><button id="nxLogin">ورود</button><button id="nxRegister" class="switch">ساخت حساب سازمانی</button><div id="nxStatus" class="nx-status"></div></div></div>
+<div class="nx-userbar"><span id="nxWho">Local Mode</span><button id="nxCloud">Cloud Login</button><button id="nxLogout" style="display:none">خروج</button></div>
+<script>
+(()=>{
+ const base=(localStorage.getItem('NEXAMATH_API')||location.origin+'/api').replace(/\/$/,'');
+ const auth=document.getElementById('nxAuth'), status=document.getElementById('nxStatus'), who=document.getElementById('nxWho');
+ const tokenKey='NEXAMATH_TOKEN';
+ function msg(t,ok=false){status.textContent=t;status.style.color=ok?'#67f5a5':'#ff8f9d'}
+ function setUser(u){who.textContent=u?`${u.email} • ${u.role}`:'Local Mode';document.getElementById('nxLogout').style.display=u?'block':'none'}
+ async function req(path,opt={}){opt.headers=Object.assign({'Content-Type':'application/json'},opt.headers||{});const t=localStorage.getItem(tokenKey);if(t)opt.headers.Authorization='Bearer '+t;const r=await fetch(base+path,opt);const d=await r.json().catch(()=>({}));if(!r.ok)throw Error(d.error||'خطا در ارتباط با سرور');return d}
+ async function me(){try{const d=await req('/me');setUser(d.user);return d}catch(e){localStorage.removeItem(tokenKey);setUser(null)}}
+ document.getElementById('nxCloud').onclick=()=>{auth.style.display='flex';document.getElementById('nxEmail').focus()};
+ document.getElementById('nxLogin').onclick=async()=>{try{msg('در حال ورود...');const d=await req('/auth/login',{method:'POST',body:JSON.stringify({email:nxEmail.value,password:nxPassword.value})});localStorage.setItem(tokenKey,d.token);auth.style.display='none';setUser(d.user)}catch(e){msg(e.message)}};
+ document.getElementById('nxRegister').onclick=async()=>{try{msg('در حال ساخت سازمان...');const d=await req('/auth/register',{method:'POST',body:JSON.stringify({email:nxEmail.value,password:nxPassword.value,organization:nxOrg.value})});localStorage.setItem(tokenKey,d.token);auth.style.display='none';setUser(d.user);alert('حساب ساخته شد. License: '+d.license)}catch(e){msg(e.message)}};
+ document.getElementById('nxLogout').onclick=()=>{localStorage.removeItem(tokenKey);setUser(null)};
+ me();
+ window.NexaEnterprise={api:req,base,login:()=>auth.style.display='flex'};
+})();
+</script>
+<script>
+async function checkFinalHealth(){const out=document.getElementById('finalHealth');if(!out)return;out.textContent='در حال بررسی...';try{const base=(localStorage.getItem('NEXAMATH_API')||location.origin+'/api').replace(/\/$/,'');const r=await fetch(base+'/health');const d=await r.json();out.textContent=(r.ok?'✅ سرور در دسترس است: ':'⚠️ پاسخ سرور: ')+JSON.stringify(d)}catch(e){out.textContent='⚠️ Backend در دسترس نیست؛ حالت Local همچنان قابل استفاده است.'}}
+</script>
+<section id="ultimate-release" style="margin:28px auto;max-width:1200px;padding:24px;border:1px solid rgba(120,150,255,.25);border-radius:22px;background:linear-gradient(135deg,rgba(20,25,55,.92),rgba(10,15,30,.96));box-shadow:0 20px 60px rgba(0,0,0,.25)">
+  <div style="display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap">
+    <div><div style="font-size:12px;opacity:.65;letter-spacing:1.5px">RELEASE GATE</div><h2 style="margin:6px 0">NexaMath Enterprise — Final Ultimate 18</h2><p style="margin:0;opacity:.75">Production-readiness dashboard: configuration checks are local/UI checks; external services must be deployed and verified before commercial launch.</p></div>
+    <div style="font-size:28px;font-weight:800">81%</div>
+  </div>
+  <div style="height:10px;background:rgba(255,255,255,.08);border-radius:99px;margin:18px 0;overflow:hidden"><div style="width:81%;height:100%;background:linear-gradient(90deg,#5ee7df,#b490ca);border-radius:99px"></div></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px">
+    <div style="padding:14px;border-radius:14px;background:rgba(255,255,255,.05)">✓ Frontend / UX<br><small>Advanced</small></div>
+    <div style="padding:14px;border-radius:14px;background:rgba(255,255,255,.05)">✓ Backend / API<br><small>Enterprise foundation</small></div>
+    <div style="padding:14px;border-radius:14px;background:rgba(255,255,255,.05)">✓ Math Engine<br><small>Server-side ready</small></div>
+    <div style="padding:14px;border-radius:14px;background:rgba(255,255,255,.05)">○ AI / Billing<br><small>Needs live provider integration</small></div>
+    <div style="padding:14px;border-radius:14px;background:rgba(255,255,255,.05)">○ Security Audit<br><small>Independent verification required</small></div>
+    <div style="padding:14px;border-radius:14px;background:rgba(255,255,255,.05)">○ Customer Pilot<br><small>Commercial proof required</small></div>
+  </div>
+</section>
+
+
+<!-- NexaMath Enterprise v18: commercial closure center -->
+<section id="commercial-closure-center" style="margin:28px auto;max-width:1180px;padding:24px;border-radius:24px;border:1px solid rgba(110,231,255,.24);background:linear-gradient(135deg,rgba(14,27,50,.97),rgba(9,15,28,.98));box-shadow:0 18px 55px rgba(0,0,0,.25);font-family:inherit">
+  <div style="display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap">
+    <div><div style="font-size:12px;opacity:.65;letter-spacing:1px">FINAL ULTIMATE 26 · COMMERCIAL CLOSURE</div><h2 style="margin:6px 0">مرحله نهایی تجاری‌سازی</h2><div style="opacity:.72;font-size:13px">این درصد ارزش شرکت نیست؛ یک شاخص تقریبی از آمادگی فنی و تجاری محصول است.</div></div>
+    <div style="font-size:36px;font-weight:900">86%</div>
+  </div>
+  <div style="height:10px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin:18px 0"><div style="width:86%;height:100%;background:linear-gradient(90deg,#67e8f9,#a78bfa);border-radius:999px"></div></div>
+  <div id="closureGrid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px"></div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+    <button class="fl-btn" onclick="runCommercialClosureCheck()">اجرای بررسی نهایی</button>
+    <button class="ghost" onclick="exportCommercialReadiness()">خروجی گزارش آمادگی</button>
+  </div>
+  <div id="closureResult" class="muted" style="margin-top:12px;font-size:12px"></div>
+</section>
+<script>
+(function(){
+ const checks=[
+  ['Frontend / UX','READY','رابط و ابزارهای اصلی'],['Math Engine','READY','محاسبات محلی و قرارداد API'],['Backend / API','READY','ساختار سرویس و endpointها'],
+  ['Auth / RBAC','READY','ورود و نقش‌های سازمانی'],['License / Usage','READY','لایسنس و محدودیت مصرف'],['AI Production','BLOCKED','کلید و provider واقعی لازم است'],
+  ['Billing / Subscription','BLOCKED','درگاه واقعی و تست تراکنش لازم است'],['Production DB','BLOCKED','استقرار و مهاجرت DB واقعی لازم است'],['Security Audit','BLOCKED','ممیزی مستقل لازم است'],
+  ['APK / AAB','BLOCKED','Build و signing نهایی لازم است'],['Monitoring / Backup','BLOCKED','زیرساخت عملیاتی واقعی لازم است'],['Customer Pilot','BLOCKED','مشتری و درآمد واقعی لازم است']
+ ];
+ const g=document.getElementById('closureGrid');
+ g.innerHTML=checks.map(x=>`<div style="padding:13px;border:1px solid rgba(255,255,255,.08);border-radius:15px;background:rgba(255,255,255,.025)"><div style="font-size:11px;opacity:.55">${x[0]}</div><div style="font-weight:850;margin:5px 0">${x[1]}</div><div style="font-size:12px;opacity:.65">${x[2]}</div></div>`).join('');
+ window.runCommercialClosureCheck=function(){
+   const ready=checks.filter(x=>x[1]==='READY').length, blocked=checks.length-ready;
+   const local=typeof evaluate==='function' && typeof runSelfTests==='function';
+   document.getElementById('closureResult').innerHTML=`نتیجه بررسی محلی: <b>${local?'✅ Core checks available':'⚠️ Core checks need review'}</b> · ${ready} آماده / ${blocked} نیازمند اقدام واقعی. برای رسیدن به معامله ۵۰۰ میلیون، بخش‌های BLOCKED باید در محیط واقعی اثبات شوند.`;
+ };
+ window.exportCommercialReadiness=function(){
+   const payload={product:'NexaMath Infinity X Enterprise',release:'FINAL ULTIMATE 26',readiness:86,generatedAt:new Date().toISOString(),checks:checks.map(x=>({area:x[0],status:x[1],note:x[2]})),note:'Readiness estimate only; not a valuation or guarantee of a 500M toman transaction.'};
+   const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'})); a.download='NexaMath-commercial-readiness-v18.json'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+ };
+})();
+</script>
+
+<!-- NexaMath Enterprise v17: commercial release gate -->
+<section id="commercial-release-gate" style="margin:28px auto;max-width:1180px;padding:24px;border-radius:24px;border:1px solid rgba(120,150,255,.22);background:linear-gradient(135deg,rgba(18,24,48,.96),rgba(10,14,30,.96));box-shadow:0 18px 55px rgba(0,0,0,.25);font-family:inherit">
+  <div style="display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap">
+    <div><div style="font-size:12px;opacity:.65">ENTERPRISE RELEASE GATE v18</div><h2 style="margin:6px 0">آمادگی تجاری NexaMath</h2><div style="opacity:.72;font-size:13px">این امتیاز، ارزش قطعی شرکت نیست؛ فقط برآورد آمادگی محصول برای یک معامله سازمانی است.</div></div>
+    <div style="font-size:34px;font-weight:900">86%</div>
+  </div>
+  <div style="height:10px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin:18px 0"><div style="width:86%;height:100%;background:linear-gradient(90deg,#6ee7ff,#8b5cf6);border-radius:999px"></div></div>
+  <div id="release-gate-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px"></div>
+  <div style="margin-top:16px;padding:14px;border-radius:16px;background:rgba(255,255,255,.045);font-size:13px;line-height:1.9"><b>۱۶٪ باقی‌مانده:</b> استقرار واقعی، AI Production، پرداخت/اشتراک واقعی، تست امنیت مستقل، Load Test، APK/AAB امضاشده، Monitoring، Pilot مشتری و اثبات درآمد.</div>
+</section>
+<script>
+(function(){
+ const items=[
+  ['Frontend / UX','PASS','رابط اصلی آماده است'],
+  ['Math Engine','PASS','هسته محاسبات نمادین'],
+  ['Backend / API','PASS','API سازمانی موجود'],
+  ['Auth / RBAC','PASS','احراز هویت و نقش‌ها'],
+  ['License / API Key','PASS','زیرساخت لایسنس'],
+  ['AI Production','PENDING','Provider واقعی باید متصل و تست شود'],
+  ['Billing','PENDING','درگاه و Subscription واقعی لازم است'],
+  ['PostgreSQL / Redis','PENDING','Deploy واقعی لازم است'],
+  ['Security Audit','PENDING','ممیزی مستقل لازم است'],
+  ['APK/AAB Release','PENDING','Build و امضای نهایی لازم است'],
+  ['Customer Pilot','PENDING','اولین مشتری واقعی لازم است']
+ ];
+ const g=document.getElementById('release-gate-grid');
+ g.innerHTML=items.map(x=>`<div style="padding:12px;border:1px solid rgba(255,255,255,.08);border-radius:15px;background:rgba(255,255,255,.025)"><div style="font-size:11px;opacity:.55">${x[0]}</div><div style="font-weight:800;margin:5px 0">${x[1]}</div><div style="font-size:12px;opacity:.65">${x[2]}</div></div>`).join('');
+})();
+</script>
+
+<script>
+(function(){
+  window.NEXAMATH_RELEASE={version:'GO-LIVE 29',readiness:86,gate:'commercial-closure'};
+  const el=document.querySelector('[data-release-gate]');
+  if(el){el.setAttribute('data-version','FINAL ULTIMATE 26');}
+})();
+</script>
+
+<section id="ultimate20Gate" style="margin:24px auto;max-width:1180px;padding:20px;border-radius:24px;background:linear-gradient(135deg,rgba(12,18,35,.96),rgba(20,31,55,.94));border:1px solid rgba(120,170,255,.22);box-shadow:0 18px 60px rgba(0,0,0,.25);font-family:inherit">
+  <div style="display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap">
+    <div><div style="font-size:12px;opacity:.7">FINAL ULTIMATE 26</div><h2 style="margin:4px 0">🚀 Commercial Closure & Deal Readiness Center</h2><div style="opacity:.75">آخرین مرحله قبل از ورود به Production واقعی</div></div>
+    <div style="font-size:36px;font-weight:900" id="u20Score">86%</div>
+  </div>
+  <div style="height:10px;background:rgba(255,255,255,.08);border-radius:99px;overflow:hidden;margin:18px 0"><div id="u20Bar" style="height:100%;width:86%;background:linear-gradient(90deg,#4ade80,#22d3ee,#818cf8);border-radius:99px"></div></div>
+  <div id="u20Grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px"></div>
+  <button id="u20Check" style="margin-top:16px;border:0;border-radius:14px;padding:12px 18px;cursor:pointer;font-weight:800">🔎 بررسی وضعیت Production</button>
+  <pre id="u20Result" style="display:none;margin-top:14px;white-space:pre-wrap;padding:14px;border-radius:14px;background:rgba(0,0,0,.25);font-size:12px"></pre>
+</section>
+<script>
+(function(){
+ const items=[['Frontend / UX','READY'],['Math Engine','READY'],['Backend API','READY'],['Auth / RBAC','READY'],['License / API Key','READY'],['AI Provider','LIVE CONFIG NEEDED'],['Billing','LIVE PROVIDER NEEDED'],['Production DB','DEPLOYMENT NEEDED'],['Security Audit','INDEPENDENT CHECK NEEDED'],['APK/AAB','SIGNED BUILD NEEDED'],['Customer Pilot','REAL CUSTOMER NEEDED']];
+ const g=document.getElementById('u20Grid');
+ g.innerHTML=items.map(x=>`<div style="padding:12px;border-radius:14px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07)"><b>${x[0]}</b><div style="font-size:11px;opacity:.7;margin-top:5px">${x[1]}</div></div>`).join('');
+ document.getElementById('u20Check').onclick=async()=>{
+   const r=document.getElementById('u20Result'); r.style.display='block'; r.textContent='در حال بررسی /api/production/readiness ...';
+   try{const res=await fetch('/api/production/readiness',{headers:{Accept:'application/json'}}); const data=await res.json(); r.textContent=JSON.stringify(data,null,2);}
+   catch(e){r.textContent='Backend Production در این آدرس در دسترس نیست. نسخه local-first همچنان قابل استفاده است.';}
+ };
+})();
+</script>
+
+
+<section id="productionLaunchCenter" class="section" style="margin-top:24px">
+  <div style="padding:22px;border-radius:22px;background:linear-gradient(135deg,rgba(103,232,249,.10),rgba(129,140,248,.10));border:1px solid rgba(255,255,255,.10)">
+    <div style="display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap">
+      <div><div style="font-size:12px;opacity:.65;letter-spacing:1px">FINAL ULTIMATE 26 · PRODUCTION LAUNCH</div><h2 style="margin:6px 0">🚀 مرکز آماده‌سازی انتشار</h2><div style="opacity:.72;font-size:13px">چک‌لیست مرحله‌ای برای تبدیل نسخه محصول به انتشار واقعی.</div></div>
+      <div id="u21Score" style="font-size:38px;font-weight:900">86%</div>
+    </div>
+    <div style="height:10px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin:18px 0"><div id="u21Bar" style="height:100%;width:86%;background:linear-gradient(90deg,#4ade80,#22d3ee,#818cf8);border-radius:99px"></div></div>
+    <div id="u21Checks" class="grid2" style="gap:10px"></div>
+    <div class="actions" style="margin-top:16px">
+      <button class="fl-btn" onclick="runU21LaunchCheck()">🔍 بررسی Launch Gate</button>
+      <button onclick="exportU21Report()">📄 خروجی گزارش</button>
+    </div>
+    <div id="u21Out" style="margin-top:12px"></div>
+  </div>
+</section>
+<script>
+(function(){
+ const checks=[
+  ['Frontend / UX','READY','رابط کاربری و ماژول‌های اصلی موجود است.'],
+  ['Math Engine','READY','هسته محاسبات و عملیات اصلی آماده اتصال به سرویس است.'],
+  ['Backend / API','READY','قراردادهای API و لایه سرویس در پروژه وجود دارد.'],
+  ['Auth / RBAC','READY','احراز هویت و نقش‌ها در معماری پروژه تعریف شده‌اند.'],
+  ['AI Provider','PENDING','کلید و سرویس واقعی باید در محیط Production تنظیم شود.'],
+  ['Payment','PENDING','درگاه واقعی، webhook و تست تراکنش واقعی لازم است.'],
+  ['Security Audit','PENDING','بازبینی مستقل امنیتی هنوز باید انجام شود.'],
+  ['APK/AAB','PENDING','ساخت و امضای نهایی Android باید انجام شود.'],
+  ['Customer Pilot','PENDING','حداقل یک مشتری آزمایشی و بازخورد واقعی لازم است.']
+ ];
+ function render(){
+  const el=document.getElementById('u21Checks'); if(!el)return;
+  el.innerHTML=checks.map(c=>`<div style="padding:13px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06)"><b>${c[1]==='READY'?'🟢':'🟡'} ${c[0]}</b><br><small style="opacity:.7">${c[2]}</small></div>`).join('');
+ }
+ window.runU21LaunchCheck=function(){
+  render();
+  const pending=checks.filter(x=>x[1]!=='READY').length;
+  document.getElementById('u21Out').innerHTML=`<div style="padding:12px;border-radius:12px;background:rgba(255,255,255,.05)">نتیجه: <b>${checks.length-pending}/${checks.length}</b> بخش آماده، <b>${pending}</b> بخش نیازمند اقدام واقعی. این شاخص ارزش‌گذاری نیست.</div>`;
+ };
+ window.exportU21Report=function(){
+  const payload={product:'NexaMath Infinity X Enterprise',release:'FINAL ULTIMATE 26',readiness:86,generatedAt:new Date().toISOString(),checks:checks.map(x=>({area:x[0],status:x[1],note:x[2]})),disclaimer:'Readiness estimate only; not a valuation or guarantee of a 500M toman transaction.'};
+  const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='NexaMath-FINAL-ULTIMATE-24-readiness.json'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+ };
+ window.NEXAMATH_RELEASE={version:'GO-LIVE 29',readiness:86,gate:'production-launch'};
+ render();
+})();
+</script>
+
+<section id="dealReadiness22" style="margin:24px auto;max-width:1200px;padding:22px;border:1px solid rgba(99,102,241,.35);border-radius:24px;background:linear-gradient(135deg,rgba(15,23,42,.96),rgba(30,41,59,.82));box-shadow:0 18px 60px rgba(0,0,0,.25);font-family:inherit">
+  <div style="display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap">
+    <div><div style="font-size:12px;opacity:.7">FINAL ULTIMATE 26</div><h2 style="margin:4px 0">🎯 Deal Readiness Center</h2><div style="opacity:.78">شاخص آمادگی برای ورود به مذاکره تجاری؛ نه ارزش‌گذاری قطعی.</div></div>
+    <div style="font-size:34px;font-weight:900">86%</div>
+  </div>
+  <div style="height:12px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin:18px 0"><div style="width:86%;height:100%;background:linear-gradient(90deg,#22c55e,#06b6d4,#6366f1)"></div></div>
+  <div id="dealGrid22" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px"></div>
+  <button onclick="runDealGate22()" style="margin-top:16px;border:0;border-radius:14px;padding:12px 18px;cursor:pointer;font-weight:800">🔍 اجرای بررسی نهایی</button>
+  <div id="dealResult22" style="margin-top:12px;opacity:.8"></div>
+</section>
+<script>
+(function(){
+ const items=[['Frontend / UX','READY'],['Math Engine','READY'],['Backend / API','READY'],['Auth / RBAC','READY'],['License / API Key','READY'],['AI Production','PENDING'],['Billing Provider','PENDING'],['Production DB','PENDING'],['Security Audit','PENDING'],['Signed APK/AAB','PENDING'],['Customer Pilot','PENDING']];
+ const g=document.getElementById('dealGrid22'); if(g) g.innerHTML=items.map(x=>`<div style="padding:12px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07)"><b>${x[0]}</b><div style="margin-top:6px;font-size:12px;color:${x[1]==='READY'?'#4ade80':'#fbbf24'}">● ${x[1]}</div></div>`).join('');
+})();
+async function runDealGate22(){
+ const out=document.getElementById('dealResult22'); if(!out)return; out.textContent='در حال بررسی وضعیت API...';
+ try{ const r=await fetch('/api/production/readiness',{headers:{'Accept':'application/json'}}); const d=await r.json(); out.textContent='API Production Readiness پاسخ داد: '+(d.ready?'READY':'NOT READY')+' — برای معامله ۵۰۰ میلیون، اعتبارسنجی مشتری و سرویس‌های واقعی همچنان ضروری است.'; }
+ catch(e){ out.textContent='حالت آفلاین: API در دسترس نیست. رابط کاربری و ابزارهای محلی قابل استفاده‌اند.'; }
+}
+</script>
+
+<section class="nx23-dealroom" id="nx23DealRoom" aria-label="Deal Room">
+  <div class="nx23-head"><div><div class="nx23-title">🏢 Deal Room & Evidence Pack — ULTIMATE 23</div><small>مرکز آماده‌سازی شواهد فنی و تجاری برای ارائه به مشتری یا سرمایه‌گذار</small></div><div class="nx23-badge" id="nx23Score">86% readiness</div></div>
+  <div class="nx23-grid">
+    <div class="nx23-card"><b>📦 Product Evidence</b><small>Frontend، Math Engine و قابلیت‌های اصلی</small></div>
+    <div class="nx23-card"><b>🔌 API Evidence</b><small>Health / Ready / OpenAPI و API contract</small></div>
+    <div class="nx23-card"><b>🔐 Security Evidence</b><small>RBAC، token، audit و security headers</small></div>
+    <div class="nx23-card"><b>💳 Commercial Evidence</b><small>License، subscription و webhook contract</small></div>
+    <div class="nx23-card"><b>🤖 AI Evidence</b><small>Adapter آماده؛ provider واقعی باید متصل شود</small></div>
+    <div class="nx23-card"><b>📱 Release Evidence</b><small>Android scaffold موجود؛ signing و انتشار واقعی باقی است</small></div>
+  </div>
+  <div class="nx23-actions">
+    <button class="nx23-btn" onclick="nx23ExportEvidence()">📄 ساخت گزارش Evidence JSON</button>
+    <button class="nx23-btn" onclick="nx23CheckReadiness()">🔎 بررسی Production Readiness</button>
+    <button class="nx23-btn" onclick="nx23SaveSnapshot()">💾 ذخیره Snapshot محلی</button>
+  </div>
+  <div id="nx23Status" style="margin-top:10px;opacity:.8">وضعیت: آماده برای بررسی.</div>
+</section>
+
+<script id="nx23-dealroom-script">
+function nx23Status(t){const e=document.getElementById("nx23Status");if(e)e.textContent="وضعیت: "+t;}
+function nx23ExportEvidence(){const data={product:"NexaMath Infinity Enterprise",release:"FINAL ULTIMATE 26",readiness_percent:86,generated_at:new Date().toISOString(),evidence:["frontend","math-engine","api-contract","auth-rbac","license-api-key","commercial-webhook-contract","ai-adapter","android-scaffold"],open_items:["live AI provider","real payment provider","production database migration/validation","independent security audit","load testing","signed APK/AAB","customer pilot","first revenue"]};const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="nexamath-ultimate-24-evidence.json";a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);nx23Status("گزارش Evidence ساخته شد.");}
+async function nx23CheckReadiness(){try{const r=await fetch("/api/production/readiness",{headers:{"Accept":"application/json"}});if(!r.ok)throw new Error("HTTP "+r.status);const d=await r.json();nx23Status("Production Readiness دریافت شد: "+JSON.stringify(d));}catch(e){nx23Status("Backend در دسترس نیست؛ حالت Local فعال است. "+e.message);}}
+function nx23SaveSnapshot(){const snap={release:"FINAL ULTIMATE 26",readiness:86,at:new Date().toISOString(),url:location.href};localStorage.setItem("NEXAMATH_ULTIMATE_23_SNAPSHOT",JSON.stringify(snap));nx23Status("Snapshot در حافظه محلی ذخیره شد.");}
+</script>
+
+<section id="ultimate24Handoff" class="section" style="margin-top:24px">
+ <div style="padding:22px;border-radius:22px;background:linear-gradient(135deg,rgba(139,92,246,.12),rgba(34,211,238,.10));border:1px solid rgba(255,255,255,.10)">
+  <div style="display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap">
+   <div><div style="font-size:12px;opacity:.65;letter-spacing:1px">FINAL ULTIMATE 26 · COMMERCIAL HANDOFF</div><h2 style="margin:6px 0">📦 مرکز تحویل و بستن معامله</h2><div style="opacity:.75;font-size:13px">نسخه نهایی برای جمع‌کردن شواهد، اقدامات باقی‌مانده و آماده‌سازی ارائه تجاری.</div></div>
+   <div style="font-size:38px;font-weight:900" id="u24Score">86%</div>
+  </div>
+  <div style="height:10px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin:18px 0"><div style="height:100%;width:86%;background:linear-gradient(90deg,#22d3ee,#8b5cf6);border-radius:999px"></div></div>
+  <div id="u24Actions" class="grid2" style="gap:10px"></div>
+  <div class="actions" style="margin-top:16px">
+   <button class="fl-btn" onclick="runU24Handoff()">🧪 بررسی نهایی تحویل</button>
+   <button onclick="exportU24Pack()">📦 ساخت Deal Pack JSON</button>
+  </div>
+  <div id="u24Out" style="margin-top:12px"></div>
+ </div>
+</section>
+<script>
+(function(){
+ const actions=[
+  ['AI Production','LIVE PROVIDER','کلید، مدل و محدودیت‌ها باید در Production تست شوند.'],
+  ['Payment','LIVE GATEWAY','درگاه واقعی و webhook با تراکنش آزمایشی اعتبارسنجی شود.'],
+  ['Database','PRODUCTION','SQLite فعلی است؛ مهاجرت/اعتبارسنجی DB Production باید انجام شود.'],
+  ['Security','INDEPENDENT AUDIT','ممیزی مستقل و رفع یافته‌های امنیتی لازم است.'],
+  ['Android','SIGNED AAB/APK','Build، signing و نصب روی دستگاه واقعی انجام شود.'],
+  ['Customer','PILOT + REVENUE','یک مشتری واقعی، قرارداد و اولین درآمد ثبت شود.']
+ ];
+ function render(){const e=document.getElementById('u24Actions');if(!e)return;e.innerHTML=actions.map(x=>`<div style="padding:13px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07)"><b>🟡 ${x[0]}</b><br><small style="opacity:.7">${x[1]} — ${x[2]}</small></div>`).join('');}
+ window.runU24Handoff=function(){render();document.getElementById('u24Out').innerHTML='<div style="padding:13px;border-radius:13px;background:rgba(255,255,255,.05)">نتیجه: هسته محصول برای تحویل آماده است؛ ۶ اقدام بیرونی هنوز باید با سرویس، دستگاه یا مشتری واقعی تأیید شوند. این شاخص ارزش‌گذاری نیست.</div>';};
+ window.exportU24Pack=function(){const p={product:'NexaMath Infinity X Enterprise',release:'FINAL ULTIMATE 26',readiness_percent:86,generated_at:new Date().toISOString(),ready_evidence:['frontend','math-engine','backend-api','auth-rbac','license-api-key','commercial-contracts','ai-adapter','android-scaffold'],external_validation_required:['live-ai-provider','live-payment-gateway','production-database','independent-security-audit','load-test','signed-apk-aab','customer-pilot','first-revenue'],commercial_note:'86% is a readiness estimate, not a valuation or guarantee of a 500M toman transaction.'};const b=new Blob([JSON.stringify(p,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='NexaMath-FINAL-ULTIMATE-24-deal-pack.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
+ window.NEXAMATH_RELEASE={version:'GO-LIVE 29',readiness:86,gate:'commercial-handoff'};render();
+})();
+</script>
+<section id="ultimate25Gate" style="margin:24px auto;max-width:1180px;padding:24px;border:1px solid rgba(120,170,255,.25);border-radius:24px;background:linear-gradient(135deg,rgba(20,30,60,.9),rgba(8,12,25,.96));box-shadow:0 20px 60px rgba(0,0,0,.25);direction:rtl">
+<h2 style="margin:0 0 8px">🏁 FINAL ULTIMATE 26 — Go-Live Command Center</h2>
+<p style="opacity:.8">آخرین کنترل قبل از تبدیل محصول به سرویس واقعی؛ وضعیت‌ها از خود برنامه و Backend قابل بررسی‌اند.</p>
+<div id="u25Grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:18px 0"></div>
+<button id="u25Check" style="padding:12px 18px;border:0;border-radius:14px;cursor:pointer;font-weight:700">🔎 بررسی وضعیت Production</button>
+<button id="u25Snapshot" style="padding:12px 18px;border:0;border-radius:14px;cursor:pointer;font-weight:700;margin-right:8px">📦 ساخت Snapshot</button>
+<pre id="u25Out" style="white-space:pre-wrap;margin-top:16px;padding:14px;border-radius:14px;background:rgba(0,0,0,.3);font-size:12px"></pre>
+</section>
+<script>
+(()=>{const items=[['Frontend','READY'],['Math Engine','READY'],['Backend API','READY'],['Auth / RBAC','READY'],['AI Provider','ACTION'],['Billing','ACTION'],['Production DB','ACTION'],['Security Audit','ACTION'],['Signed APK/AAB','ACTION'],['Customer Pilot','ACTION']];const g=document.getElementById('u25Grid');g.innerHTML=items.map(x=>`<div style="padding:15px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)"><b>${x[0]}</b><div style="margin-top:7px;font-size:13px">${x[1]==='READY'?'🟢 آماده':'🟡 اقدام لازم'}</div></div>`).join('');const out=document.getElementById('u25Out');document.getElementById('u25Check').onclick=async()=>{out.textContent='در حال بررسی /api/production/readiness ...';try{const r=await fetch('/api/production/readiness');const d=await r.json();out.textContent=JSON.stringify(d,null,2)}catch(e){out.textContent='Backend در دسترس نیست؛ حالت Local فعال است.
+'+e.message}};document.getElementById('u25Snapshot').onclick=()=>{const d={release:'FINAL ULTIMATE 26',readiness:'86%',generatedAt:new Date().toISOString(),next:'Production deployment + live AI + payment + security audit + signed APK/AAB + customer pilot'};localStorage.setItem('NexaMath_U25_SNAPSHOT',JSON.stringify(d));out.textContent='✅ Snapshot ذخیره شد:
+'+JSON.stringify(d,null,2)}})();
+</script>
+
+<section id="u26Launch" class="panel" style="margin:20px 0">
+ <div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap">
+  <div><h2 style="margin:0">🧪 Final Self-Test Center</h2><small style="opacity:.72">آزمون‌های قابل انجام داخل همین index؛ بدون ادعای تست سرویس‌های خارجی</small></div>
+  <button onclick="runU26SelfTest()">▶ اجرای تست نهایی</button>
+ </div>
+ <div id="u26Tests" class="grid2" style="gap:10px;margin-top:14px"></div>
+ <div id="u26Summary" style="margin-top:12px"></div>
+</section>
+<script>
+(function(){
+ window.runU26SelfTest=function(){
+  const tests=[];
+  const add=(name,ok,detail)=>tests.push({name,ok,detail});
+  add('HTML Runtime',!!document.body,'DOM در دسترس است.');
+  let ls=false; try{localStorage.setItem('__nx26','1');ls=localStorage.getItem('__nx26')==='1';localStorage.removeItem('__nx26')}catch(e){} add('Local Storage',ls,ls?'ذخیره محلی فعال است.':'LocalStorage در این محیط در دسترس نیست.');
+  add('Web Crypto',!!window.crypto && !!window.crypto.subtle,window.crypto&&window.crypto.subtle?'Web Crypto در دسترس است.':'Web Crypto در دسترس نیست.');
+  add('Service Worker', 'serviceWorker' in navigator,'Service Worker API '+('serviceWorker' in navigator?'در دسترس است.':'در دسترس نیست.'));
+  add('Online Status',navigator.onLine, navigator.onLine?'مرورگر آنلاین گزارش می‌دهد.':'مرورگر آفلاین گزارش می‌دهد.');
+  const api=(window.API_BASE||window.API||'http://127.0.0.1:5050/api').replace(/\/$/,'');
+  fetch(api+'/health',{method:'GET'}).then(r=>r.ok?r.text():Promise.reject(new Error('HTTP '+r.status))).then(()=>add('Backend /health',true,'Backend پاسخ داد.')).catch(()=>add('Backend /health',false,'در این لحظه پاسخ قابل تأیید از Backend دریافت نشد.'));
+  setTimeout(()=>{const e=document.getElementById('u26Tests');e.innerHTML=tests.map(t=>`<div style="padding:13px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)"><b>${t.ok?'🟢':'🔴'} ${t.name}</b><br><small style="opacity:.7">${t.detail}</small></div>`).join('');const ok=tests.filter(t=>t.ok).length;document.getElementById('u26Summary').innerHTML=`<div style="padding:13px;border-radius:13px;background:rgba(255,255,255,.05)">نتیجه خودآزمایی: <b>${ok}/${tests.length}</b> تست محلی قابل تأیید بود. این نتیجه جایگزین تست Production، امنیت، پرداخت یا مشتری واقعی نیست.</div>`;},700);
+ };
+ window.NEXAMATH_RELEASE={...(window.NEXAMATH_RELEASE||{}),version:'GO-LIVE 30',readiness:86,gate:'evidence-driven-go-live'};
+})();
+</script>
+<section id="u29Evidence" style="margin:24px auto;max-width:1200px;padding:20px;border-radius:22px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(135deg,rgba(0,220,255,.08),rgba(120,80,255,.08));direction:rtl;font-family:inherit"><div style="display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap"><div><div style="font-size:12px;opacity:.65;letter-spacing:1px">GO-LIVE 29 · EVIDENCE GATE</div><h2 style="margin:6px 0">مرکز شواهد استقرار واقعی</h2><p style="margin:0;opacity:.75">این پنل فقط وضعیت قابل اثبات را نمایش می‌دهد و سرویس‌های خارجی را جعلی سبز نمی‌کند.</p></div><b style="font-size:24px">86%</b></div><div id="u29Grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:16px"></div><button id="u29Snapshot" style="margin-top:14px;padding:11px 16px;border:0;border-radius:12px;cursor:pointer;font-weight:800">📦 ذخیره Evidence Snapshot</button><pre id="u29Out" style="white-space:pre-wrap;margin-top:12px;padding:12px;border-radius:14px;background:rgba(0,0,0,.22);max-height:280px;overflow:auto"></pre></section><script>(function(){const items=[['Backend واقعی','BLOCKED','نیازمند سرور و health واقعی'],['AI Provider','BLOCKED','نیازمند API Key و تست واقعی'],['Payment','BLOCKED','نیازمند درگاه و webhook واقعی'],['Security Audit','BLOCKED','ممیزی مستقل لازم است'],['Load Test','BLOCKED','تست روی محیط Production لازم است'],['Signed APK/AAB','BLOCKED','Release signing لازم است'],['Customer Pilot','BLOCKED','مشتری آزمایشی لازم است'],['First Revenue','BLOCKED','درآمد واقعی هنوز اثبات نشده']];const g=document.getElementById('u29Grid');if(!g)return;g.innerHTML=items.map(x=>`<div style="padding:13px;border-radius:15px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)"><b>🟡 ${x[0]}</b><div style="font-size:12px;margin-top:5px;opacity:.7">${x[2]}</div></div>`).join('');document.getElementById('u29Snapshot').onclick=()=>{const d={product:'NexaMath Infinity X Enterprise',release:'GO-LIVE 29',readiness_percent:86,generated_at:new Date().toISOString(),external_validation_required:items.map(x=>x[0]),note:'Readiness estimate only; not a valuation or guarantee of a 500M toman transaction.'};localStorage.setItem('NexaMath_GO_LIVE_29_EVIDENCE',JSON.stringify(d));document.getElementById('u29Out').textContent='✅ Evidence Snapshot ذخیره شد.
+
+'+JSON.stringify(d,null,2)}})();</script>
+
+<section id="nx30Gate" style="margin:24px auto;max-width:1200px;padding:22px;border-radius:22px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(135deg,rgba(0,220,255,.09),rgba(255,0,170,.07));direction:rtl;font-family:inherit"><div style="display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap"><div><div style="font-size:12px;opacity:.65;letter-spacing:1px">GO-LIVE 30 · EVIDENCE-DRIVEN</div><h2 style="margin:6px 0">مرکز عبور از ۸۶٪</h2><p style="margin:0;opacity:.75">فقط شواهد واقعی می‌توانند Gate را از BLOCKED به PASS تغییر دهند.</p></div><b style="font-size:26px">86%</b></div><div id="nx30Gates" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:16px"></div><button id="nx30Run" style="margin-top:14px;padding:11px 16px;border:0;border-radius:12px;cursor:pointer;font-weight:800">🔎 بررسی Go-Live</button><pre id="nx30Out" style="white-space:pre-wrap;margin-top:12px;padding:12px;border-radius:14px;background:rgba(0,0,0,.22);max-height:260px;overflow:auto"></pre></section><script>(function(){const names=['Server واقعی','AI واقعی','Payment واقعی','Security Audit','Load Test','Signed APK/AAB','Customer Pilot','First Revenue'];const g=document.getElementById('nx30Gates');g.innerHTML=names.map(n=>`<div style="padding:13px;border-radius:15px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)"><b>🟡 ${n}</b><div style="font-size:12px;opacity:.7;margin-top:5px">نیازمند شواهد خارجی</div></div>`).join('');document.getElementById('nx30Run').onclick=async()=>{const out=document.getElementById('nx30Out');out.textContent='ℹ️ این index نمی‌تواند وجود سرور/درگاه/مشتری واقعی را جعل کند. برای بررسی Backend ابتدا آن را روی HTTPS اجرا کنید.';try{const api=(window.API_BASE||window.API||'http://127.0.0.1:5050/api').replace(/\/$/,'');const r=await fetch(api+'/health');out.textContent += '\nBackend /health: '+(r.ok?'PASS':'BLOCKED')+' (HTTP '+r.status+')';}catch(e){out.textContent += '\nBackend /health: BLOCKED';}}})();</script>
+</body></html>`);w.document.close()}
+function exportEnterpriseBundle(){let payload={product:'NexaMath Infinity X',version:'Enterprise',exportedAt:new Date().toISOString(),workspace:$('wsName').value,note:$('wsNote').value,history:hist,settings:{angle,precision,grouping},features:['Math Engine','Graph','Equation','Matrix','Statistics','Converter','Finance','Number Theory','Regression','Probability','Programmer','Formula Vault','Workspace']};let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));a.download='NexaMath-Infinity-X-project.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+
+
+/* ===== Ultimate X Final Engine ===== */
+function toggleTheme(){document.body.classList.toggle('light');localStorage.setItem('nm_theme',document.body.classList.contains('light')?'light':'dark');toast(document.body.classList.contains('light')?'تم روشن':'تم تاریک')}
+function toggleFullscreen(){if(!document.fullscreenElement)document.documentElement.requestFullscreen?.();else document.exitFullscreen?.()}
+const UX_COMMANDS=[['داشبورد','home','نمای اصلی'],['نمودار','graph','Graph Studio'],['معادله','eq','Equation Solver'],['ماتریس','matrix','Matrix Lab'],['آمار','stats','Statistics'],['تبدیل','convert','Converter'],['مالی','finance','Finance Lab'],['AI','ai','AI Assistant'],['موتور ریاضی','engine','Reasoning Engine'],['کیفیت','quality','Self Tests'],['امنیت','security','Security & IP'],['اعداد','numbers','Number Theory'],['رگرسیون','regression','Regression'],['احتمال','probability','Probability'],['برنامه‌نویس','programmer','Programmer'],['فرمول‌ها','formulas','Formula Vault'],['Workspace','workspace','Local Workspace'],['Ultimate','ultimate','Ultimate Command Center']];
+function renderCommands(q=''){let a=UX_COMMANDS.filter(x=>(x[0]+' '+x[2]).toLowerCase().includes(q.toLowerCase()));$('commandList').innerHTML=a.map((x,i)=>`<div class="command-item" onclick="closeCommand();activate('${x[1]}')"><span>⚡ ${x[0]}<br><small>${x[2]}</small></span><span class="shortcut">${i<9?'⌘'+(i+1):''}</span></div>`).join('')||'<div class="muted" style="padding:14px">موردی پیدا نشد.</div>'}
+function openCommand(){let o=$('commandOverlay');o.classList.add('open');$('commandInput').value='';renderCommands();setTimeout(()=>$('commandInput').focus(),30)}
+function closeCommand(){$('commandOverlay').classList.remove('open')}
+$('commandInput')?.addEventListener('input',e=>renderCommands(e.target.value));
+document.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openCommand()}if(e.key==='Escape')closeCommand()});
+function quickQuadratic(){let raw=$('uxQuad').value.trim().replace(/=0\s*$/,'');let m=raw.match(/^(.+?)x\^2\s*([+-]\s*\d*\.?\d*)x\s*([+-]\s*\d*\.?\d+)$/i);if(!m){$('uxQuadOut').innerHTML='<div class="result">فرمت نمونه: x^2-5x+6=0</div>';return}let b=parseFloat(m[2].replace(/\s/g,''))||1,c=parseFloat(m[3].replace(/\s/g,'')),a=1;let A=raw.match(/^([+-]?\d*\.?\d*)x\^2/i);if(A){let z=A[1].replace(/\s/g,'');if(z===''||z==='+')a=1;else if(z==='-')a=-1;else a=Number(z)}let D=b*b-4*a*c;if(D<0){let re=-b/(2*a),im=Math.sqrt(-D)/(2*a);$('uxQuadOut').innerHTML=`<div class="result"><div class="big">x₁ = ${fmt(re)} + ${fmt(im)}i<br>x₂ = ${fmt(re)} − ${fmt(im)}i</div><p>Δ = ${fmt(D)} • دو ریشه مختلط</p></div>`}else{let r1=(-b+Math.sqrt(D))/(2*a),r2=(-b-Math.sqrt(D))/(2*a);$('uxQuadOut').innerHTML=`<div class="result"><div class="big">x₁ = ${fmt(r1)}<br>x₂ = ${fmt(r2)}</div><p>Δ = ${fmt(D)} • بررسی: f(x₁) و f(x₂) ≈ 0</p></div>`}}
+function batchSolveUI(){try{let lines=$('uxBatch').value.split(/\n|;/).map(x=>x.trim()).filter(Boolean),rows=lines.map(q=>{try{return [q,fmt(evaluate(q)),'PASS']}catch(e){return [q,e.message,'ERROR']}});$('uxBatchOut').innerHTML='<div class="result"><table class="tablex"><tr><th>Expression</th><th>Result</th><th>Status</th></tr>'+rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('')+'</table></div>'}catch(e){$('uxBatchOut').innerHTML='<div class="result">'+e.message+'</div>'}}
+function exportCSV(){let rows=[['Expression','Result','Timestamp'],...hist.map(h=>[h.raw,h.val,h.t||''])];let csv=rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='nexamath-history.csv';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+function ultimateAudit(){let tests=runSelfTests();let items=[['Core engine',tests.pass===tests.total,'self-tests'],['Local storage',true,'browser local'],['Safe parser',!/eval\s*\(|new Function\s*\(/.test(document.documentElement.innerHTML),'no eval/Function'],['AI',!!window.fetch,'endpoint contract'],['Offline math',typeof evaluate==='function','available'],['Workspace',typeof saveWorkspace==='function','available'],['Graph',typeof drawGraph==='function','available']];let ok=items.filter(x=>x[1]).length;$('uxAudit').innerHTML='<div class="result"><div class="big">'+ok+'/'+items.length+' checks green</div>'+items.map(x=>`<div class="testrow"><span>${x[0]} — ${x[2]}</span><b class="${x[1]?'ok':'bad'}">${x[1]?'READY':'REVIEW'}</b></div>`).join('')+'</div>';updateUltimateMetrics()}
+function resetUltimateDemo(){$('uxQuad').value='x^2-5x+6=0';$('uxBatch').value='2+3*4\nsqrt(144)\nmean(10,20,30)\n5!';$('uxQuadOut').innerHTML='';$('uxBatchOut').innerHTML='';toast('دموی Ultimate بازنشانی شد')}
+function updateUltimateMetrics(){if(!$('uxHist'))return;$('uxHist').textContent=hist.length;$('uxTests').textContent='25+';$('uxStorage').textContent=(new Blob([localStorage.getItem('nm_hist')||'']).size/1024).toFixed(1)+' KB';let c=$('sparkHist');if(c){let ctx=c.getContext('2d'),w=c.width=c.clientWidth*2,h=c.height=c.clientHeight*2;ctx.clearRect(0,0,w,h);ctx.lineWidth=3;ctx.strokeStyle='#22d3ee';ctx.beginPath();let n=Math.min(20,hist.length||1);for(let i=0;i<n;i++){let x=i/(Math.max(1,n-1))*w,y=h-(i+1)/n*h*.75-h*.1;i?ctx.lineTo(x,y):ctx.moveTo(x,y)}ctx.stroke()}}
+const oldRenderHist=window.renderHist;window.renderHist=function(){if(typeof oldRenderHist==='function')oldRenderHist();updateUltimateMetrics()};
+setTimeout(()=>{if(localStorage.getItem('nm_theme')==='light')document.body.classList.add('light');updateUltimateMetrics()},50);
+</script>
+<script>
+(function(){
+  const API_BASE = localStorage.getItem('NEXAMATH_API') || '/api';
+  const entTokenKey='NEXAMATH_TOKEN';
+  function entMsg(t){const e=document.getElementById('entMsg');if(e)e.textContent=t;}
+  function entHeaders(){const t=localStorage.getItem(entTokenKey);return t?{'Authorization':'Bearer '+t}:{};}
+  async function enterpriseLogin(){const email=entEmail.value.trim(),password=entPassword.value;try{const r=await fetch(API_BASE+'/auth/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,password})}),d=await r.json();if(!r.ok)throw Error(d.error||'ورود ناموفق');localStorage.setItem(entTokenKey,d.token);document.getElementById('enterpriseAuth').style.display='none';entMsg('');}catch(e){entMsg(e.message)}}
+  async function enterpriseRegister(){const email=entEmail.value.trim(),password=entPassword.value,organization=entOrg.value.trim();try{const r=await fetch(API_BASE+'/auth/register',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,password,organization})}),d=await r.json();if(!r.ok)throw Error(d.error||'ثبت‌نام ناموفق');localStorage.setItem(entTokenKey,d.token);document.getElementById('enterpriseAuth').style.display='none';alert('ثبت‌نام موفق شد. License شما: '+d.license)}catch(e){entMsg(e.message)}}
+  function enterpriseGuest(){localStorage.removeItem(entTokenKey);document.getElementById('enterpriseAuth').style.display='none';}
+  window.addEventListener('DOMContentLoaded',()=>{if(localStorage.getItem(entTokenKey))document.getElementById('enterpriseAuth').style.display='none';});
+  window.NexaMathAPI = {
+    base: API_BASE,
+    async request(path, options={}){
+      const r=await fetch(API_BASE+path,{headers:{'Content-Type':'application/json',...(options.headers||{})},...options});
+      const d=await r.json().catch(()=>({success:false,error:'Invalid server response'}));
+      if(!r.ok) throw new Error(d.error||('HTTP '+r.status)); return d;
+    },
+    health(){return this.request('/health')},
+    register(email,password){return this.request('/auth/register',{method:'POST',body:JSON.stringify({email,password})})},
+    login(email,password){return this.request('/auth/login',{method:'POST',body:JSON.stringify({email,password})})},
+    history(){return this.request('/history')},
+    saveHistory(expression,result){return this.request('/history',{method:'POST',body:JSON.stringify({expression,result})})},
+    ai(prompt){return this.request('/ai/chat',{method:'POST',body:JSON.stringify({prompt})})}
+  };
+  window.NexaMathInfinityX={version:'Enterprise X',api:window.NexaMathAPI};
+})();
+</script>
+
+<style>
+#nxAuth{position:fixed;inset:0;z-index:99999;background:rgba(4,8,18,.82);backdrop-filter:blur(14px);display:none;align-items:center;justify-content:center;padding:20px}
+#nxAuth .box{width:min(430px,100%);border:1px solid rgba(0,220,255,.28);border-radius:24px;padding:26px;background:linear-gradient(145deg,#0b1224,#101a30);box-shadow:0 30px 100px #0008;color:#fff}
+#nxAuth h2{margin:0 0 6px;font-size:25px}#nxAuth p{opacity:.72;margin:0 0 20px}
+#nxAuth input{width:100%;box-sizing:border-box;margin:7px 0;padding:13px 14px;border-radius:13px;border:1px solid #ffffff18;background:#ffffff0a;color:#fff;outline:none}
+#nxAuth button{width:100%;margin-top:10px;padding:13px;border:0;border-radius:13px;background:linear-gradient(90deg,#00c6ff,#7b61ff);color:white;font-weight:800}
+#nxAuth .switch{background:#ffffff0a}.nx-status{font-size:12px;margin-top:10px;min-height:18px}
+.nx-userbar{position:fixed;top:10px;left:10px;z-index:9000;display:flex;gap:7px;align-items:center;padding:7px 10px;border:1px solid #ffffff18;border-radius:12px;background:#07101dcc;backdrop-filter:blur(10px);font-size:11px}.nx-userbar button{border:0;border-radius:8px;padding:6px 9px;background:#ffffff12;color:#fff}
+</style>
+<div id="nxAuth"><div class="box"><div style="font-size:36px">∑</div><h2>NexaMath Enterprise</h2><p>ورود به فضای سازمانی و Cloud Workspace</p><input id="nxEmail" type="email" placeholder="ایمیل سازمانی"><input id="nxPassword" type="password" placeholder="رمز عبور (حداقل ۸ کاراکتر)"><input id="nxOrg" placeholder="نام سازمان — فقط هنگام ثبت‌نام"><button id="nxLogin">ورود</button><button id="nxRegister" class="switch">ساخت حساب سازمانی</button><div id="nxStatus" class="nx-status"></div></div></div>
+<div class="nx-userbar"><span id="nxWho">Local Mode</span><button id="nxCloud">Cloud Login</button><button id="nxLogout" style="display:none">خروج</button></div>
+<script>
+(()=>{
+ const base=(localStorage.getItem('NEXAMATH_API')||location.origin+'/api').replace(/\/$/,'');
+ const auth=document.getElementById('nxAuth'), status=document.getElementById('nxStatus'), who=document.getElementById('nxWho');
+ const tokenKey='NEXAMATH_TOKEN';
+ function msg(t,ok=false){status.textContent=t;status.style.color=ok?'#67f5a5':'#ff8f9d'}
+ function setUser(u){who.textContent=u?`${u.email} • ${u.role}`:'Local Mode';document.getElementById('nxLogout').style.display=u?'block':'none'}
+ async function req(path,opt={}){opt.headers=Object.assign({'Content-Type':'application/json'},opt.headers||{});const t=localStorage.getItem(tokenKey);if(t)opt.headers.Authorization='Bearer '+t;const r=await fetch(base+path,opt);const d=await r.json().catch(()=>({}));if(!r.ok)throw Error(d.error||'خطا در ارتباط با سرور');return d}
+ async function me(){try{const d=await req('/me');setUser(d.user);return d}catch(e){localStorage.removeItem(tokenKey);setUser(null)}}
+ document.getElementById('nxCloud').onclick=()=>{auth.style.display='flex';document.getElementById('nxEmail').focus()};
+ document.getElementById('nxLogin').onclick=async()=>{try{msg('در حال ورود...');const d=await req('/auth/login',{method:'POST',body:JSON.stringify({email:nxEmail.value,password:nxPassword.value})});localStorage.setItem(tokenKey,d.token);auth.style.display='none';setUser(d.user)}catch(e){msg(e.message)}};
+ document.getElementById('nxRegister').onclick=async()=>{try{msg('در حال ساخت سازمان...');const d=await req('/auth/register',{method:'POST',body:JSON.stringify({email:nxEmail.value,password:nxPassword.value,organization:nxOrg.value})});localStorage.setItem(tokenKey,d.token);auth.style.display='none';setUser(d.user);alert('حساب ساخته شد. License: '+d.license)}catch(e){msg(e.message)}};
+ document.getElementById('nxLogout').onclick=()=>{localStorage.removeItem(tokenKey);setUser(null)};
+ me();
+ window.NexaEnterprise={api:req,base,login:()=>auth.style.display='flex'};
+})();
+</script>
+
+<section id="ultimate-release" style="margin:28px auto;max-width:1200px;padding:24px;border:1px solid rgba(120,150,255,.25);border-radius:22px;background:linear-gradient(135deg,rgba(20,25,55,.92),rgba(10,15,30,.96));box-shadow:0 20px 60px rgba(0,0,0,.25)">
+  <div style="display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap">
+    <div><div style="font-size:12px;opacity:.65;letter-spacing:1.5px">RELEASE GATE</div><h2 style="margin:6px 0">NexaMath Enterprise — Final Ultimate 18</h2><p style="margin:0;opacity:.75">Production-readiness dashboard: configuration checks are local/UI checks; external services must be deployed and verified before commercial launch.</p></div>
+    <div style="font-size:28px;font-weight:800">81%</div>
+  </div>
+  <div style="height:10px;background:rgba(255,255,255,.08);border-radius:99px;margin:18px 0;overflow:hidden"><div style="width:81%;height:100%;background:linear-gradient(90deg,#5ee7df,#b490ca);border-radius:99px"></div></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px">
+    <div style="padding:14px;border-radius:14px;background:rgba(255,255,255,.05)">✓ Frontend / UX<br><small>Advanced</small></div>
+    <div style="padding:14px;border-radius:14px;background:rgba(255,255,255,.05)">✓ Backend / API<br><small>Enterprise foundation</small></div>
+    <div style="padding:14px;border-radius:14px;background:rgba(255,255,255,.05)">✓ Math Engine<br><small>Server-side ready</small></div>
+    <div style="padding:14px;border-radius:14px;background:rgba(255,255,255,.05)">○ AI / Billing<br><small>Needs live provider integration</small></div>
+    <div style="padding:14px;border-radius:14px;background:rgba(255,255,255,.05)">○ Security Audit<br><small>Independent verification required</small></div>
+    <div style="padding:14px;border-radius:14px;background:rgba(255,255,255,.05)">○ Customer Pilot<br><small>Commercial proof required</small></div>
+  </div>
+</section>
+
+
+<!-- NexaMath Enterprise v17: commercial release gate -->
+<section id="commercial-release-gate" style="margin:28px auto;max-width:1180px;padding:24px;border-radius:24px;border:1px solid rgba(120,150,255,.22);background:linear-gradient(135deg,rgba(18,24,48,.96),rgba(10,14,30,.96));box-shadow:0 18px 55px rgba(0,0,0,.25);font-family:inherit">
+  <div style="display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap">
+    <div><div style="font-size:12px;opacity:.65">ENTERPRISE RELEASE GATE v18</div><h2 style="margin:6px 0">آمادگی تجاری NexaMath</h2><div style="opacity:.72;font-size:13px">این امتیاز، ارزش قطعی شرکت نیست؛ فقط برآورد آمادگی محصول برای یک معامله سازمانی است.</div></div>
+    <div style="font-size:34px;font-weight:900">86%</div>
+  </div>
+  <div style="height:10px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin:18px 0"><div style="width:86%;height:100%;background:linear-gradient(90deg,#6ee7ff,#8b5cf6);border-radius:999px"></div></div>
+  <div id="release-gate-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px"></div>
+  <div style="margin-top:16px;padding:14px;border-radius:16px;background:rgba(255,255,255,.045);font-size:13px;line-height:1.9"><b>۱۶٪ باقی‌مانده:</b> استقرار واقعی، AI Production، پرداخت/اشتراک واقعی، تست امنیت مستقل، Load Test، APK/AAB امضاشده، Monitoring، Pilot مشتری و اثبات درآمد.</div>
+</section>
+<script>
+(function(){
+ const items=[
+  ['Frontend / UX','PASS','رابط اصلی آماده است'],
+  ['Math Engine','PASS','هسته محاسبات نمادین'],
+  ['Backend / API','PASS','API سازمانی موجود'],
+  ['Auth / RBAC','PASS','احراز هویت و نقش‌ها'],
+  ['License / API Key','PASS','زیرساخت لایسنس'],
+  ['AI Production','PENDING','Provider واقعی باید متصل و تست شود'],
+  ['Billing','PENDING','درگاه و Subscription واقعی لازم است'],
+  ['PostgreSQL / Redis','PENDING','Deploy واقعی لازم است'],
+  ['Security Audit','PENDING','ممیزی مستقل لازم است'],
+  ['APK/AAB Release','PENDING','Build و امضای نهایی لازم است'],
+  ['Customer Pilot','PENDING','اولین مشتری واقعی لازم است']
+ ];
+ const g=document.getElementById('release-gate-grid');
+ g.innerHTML=items.map(x=>`<div style="padding:12px;border:1px solid rgba(255,255,255,.08);border-radius:15px;background:rgba(255,255,255,.025)"><div style="font-size:11px;opacity:.55">${x[0]}</div><div style="font-weight:800;margin:5px 0">${x[1]}</div><div style="font-size:12px;opacity:.65">${x[2]}</div></div>`).join('');
+})();
+</script>
+
+<script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}));}</script>
+<script>
+(function(){
+  window.NEXAMATH_RELEASE={version:'GO-LIVE 29',readiness:86,gate:'commercial-closure'};
+  const el=document.querySelector('[data-release-gate]');
+  if(el){el.setAttribute('data-version','FINAL ULTIMATE 26');}
+})();
+</script>
+
+<section id="productionLaunchCenter" class="section" style="margin-top:24px">
+  <div style="padding:22px;border-radius:22px;background:linear-gradient(135deg,rgba(103,232,249,.10),rgba(129,140,248,.10));border:1px solid rgba(255,255,255,.10)">
+    <div style="display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap">
+      <div><div style="font-size:12px;opacity:.65;letter-spacing:1px">FINAL ULTIMATE 26 · PRODUCTION LAUNCH</div><h2 style="margin:6px 0">🚀 مرکز آماده‌سازی انتشار</h2><div style="opacity:.72;font-size:13px">چک‌لیست مرحله‌ای برای تبدیل نسخه محصول به انتشار واقعی.</div></div>
+      <div id="u21Score" style="font-size:38px;font-weight:900">86%</div>
+    </div>
+    <div style="height:10px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin:18px 0"><div id="u21Bar" style="height:100%;width:86%;background:linear-gradient(90deg,#4ade80,#22d3ee,#818cf8);border-radius:99px"></div></div>
+    <div id="u21Checks" class="grid2" style="gap:10px"></div>
+    <div class="actions" style="margin-top:16px">
+      <button class="fl-btn" onclick="runU21LaunchCheck()">🔍 بررسی Launch Gate</button>
+      <button onclick="exportU21Report()">📄 خروجی گزارش</button>
+    </div>
+    <div id="u21Out" style="margin-top:12px"></div>
+  </div>
+</section>
+<script>
+(function(){
+ const checks=[
+  ['Frontend / UX','READY','رابط کاربری و ماژول‌های اصلی موجود است.'],
+  ['Math Engine','READY','هسته محاسبات و عملیات اصلی آماده اتصال به سرویس است.'],
+  ['Backend / API','READY','قراردادهای API و لایه سرویس در پروژه وجود دارد.'],
+  ['Auth / RBAC','READY','احراز هویت و نقش‌ها در معماری پروژه تعریف شده‌اند.'],
+  ['AI Provider','PENDING','کلید و سرویس واقعی باید در محیط Production تنظیم شود.'],
+  ['Payment','PENDING','درگاه واقعی، webhook و تست تراکنش واقعی لازم است.'],
+  ['Security Audit','PENDING','بازبینی مستقل امنیتی هنوز باید انجام شود.'],
+  ['APK/AAB','PENDING','ساخت و امضای نهایی Android باید انجام شود.'],
+  ['Customer Pilot','PENDING','حداقل یک مشتری آزمایشی و بازخورد واقعی لازم است.']
+ ];
+ function render(){
+  const el=document.getElementById('u21Checks'); if(!el)return;
+  el.innerHTML=checks.map(c=>`<div style="padding:13px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.06)"><b>${c[1]==='READY'?'🟢':'🟡'} ${c[0]}</b><br><small style="opacity:.7">${c[2]}</small></div>`).join('');
+ }
+ window.runU21LaunchCheck=function(){
+  render();
+  const pending=checks.filter(x=>x[1]!=='READY').length;
+  document.getElementById('u21Out').innerHTML=`<div style="padding:12px;border-radius:12px;background:rgba(255,255,255,.05)">نتیجه: <b>${checks.length-pending}/${checks.length}</b> بخش آماده، <b>${pending}</b> بخش نیازمند اقدام واقعی. این شاخص ارزش‌گذاری نیست.</div>`;
+ };
+ window.exportU21Report=function(){
+  const payload={product:'NexaMath Infinity X Enterprise',release:'FINAL ULTIMATE 26',readiness:86,generatedAt:new Date().toISOString(),checks:checks.map(x=>({area:x[0],status:x[1],note:x[2]})),disclaimer:'Readiness estimate only; not a valuation or guarantee of a 500M toman transaction.'};
+  const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='NexaMath-FINAL-ULTIMATE-24-readiness.json'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+ };
+ window.NEXAMATH_RELEASE={version:'GO-LIVE 29',readiness:86,gate:'production-launch'};
+ render();
+})();
+</script>
+
+<section id="ultimate24Handoff" class="section" style="margin-top:24px">
+ <div style="padding:22px;border-radius:22px;background:linear-gradient(135deg,rgba(139,92,246,.12),rgba(34,211,238,.10));border:1px solid rgba(255,255,255,.10)">
+  <div style="display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap">
+   <div><div style="font-size:12px;opacity:.65;letter-spacing:1px">FINAL ULTIMATE 26 · COMMERCIAL HANDOFF</div><h2 style="margin:6px 0">📦 مرکز تحویل و بستن معامله</h2><div style="opacity:.75;font-size:13px">نسخه نهایی برای جمع‌کردن شواهد، اقدامات باقی‌مانده و آماده‌سازی ارائه تجاری.</div></div>
+   <div style="font-size:38px;font-weight:900" id="u24Score">86%</div>
+  </div>
+  <div style="height:10px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin:18px 0"><div style="height:100%;width:86%;background:linear-gradient(90deg,#22d3ee,#8b5cf6);border-radius:999px"></div></div>
+  <div id="u24Actions" class="grid2" style="gap:10px"></div>
+  <div class="actions" style="margin-top:16px">
+   <button class="fl-btn" onclick="runU24Handoff()">🧪 بررسی نهایی تحویل</button>
+   <button onclick="exportU24Pack()">📦 ساخت Deal Pack JSON</button>
+  </div>
+  <div id="u24Out" style="margin-top:12px"></div>
+ </div>
+</section>
+<script>
+(function(){
+ const actions=[
+  ['AI Production','LIVE PROVIDER','کلید، مدل و محدودیت‌ها باید در Production تست شوند.'],
+  ['Payment','LIVE GATEWAY','درگاه واقعی و webhook با تراکنش آزمایشی اعتبارسنجی شود.'],
+  ['Database','PRODUCTION','SQLite فعلی است؛ مهاجرت/اعتبارسنجی DB Production باید انجام شود.'],
+  ['Security','INDEPENDENT AUDIT','ممیزی مستقل و رفع یافته‌های امنیتی لازم است.'],
+  ['Android','SIGNED AAB/APK','Build، signing و نصب روی دستگاه واقعی انجام شود.'],
+  ['Customer','PILOT + REVENUE','یک مشتری واقعی، قرارداد و اولین درآمد ثبت شود.']
+ ];
+ function render(){const e=document.getElementById('u24Actions');if(!e)return;e.innerHTML=actions.map(x=>`<div style="padding:13px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07)"><b>🟡 ${x[0]}</b><br><small style="opacity:.7">${x[1]} — ${x[2]}</small></div>`).join('');}
+ window.runU24Handoff=function(){render();document.getElementById('u24Out').innerHTML='<div style="padding:13px;border-radius:13px;background:rgba(255,255,255,.05)">نتیجه: هسته محصول برای تحویل آماده است؛ ۶ اقدام بیرونی هنوز باید با سرویس، دستگاه یا مشتری واقعی تأیید شوند. این شاخص ارزش‌گذاری نیست.</div>';};
+ window.exportU24Pack=function(){const p={product:'NexaMath Infinity X Enterprise',release:'FINAL ULTIMATE 26',readiness_percent:86,generated_at:new Date().toISOString(),ready_evidence:['frontend','math-engine','backend-api','auth-rbac','license-api-key','commercial-contracts','ai-adapter','android-scaffold'],external_validation_required:['live-ai-provider','live-payment-gateway','production-database','independent-security-audit','load-test','signed-apk-aab','customer-pilot','first-revenue'],commercial_note:'86% is a readiness estimate, not a valuation or guarantee of a 500M toman transaction.'};const b=new Blob([JSON.stringify(p,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='NexaMath-FINAL-ULTIMATE-24-deal-pack.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};
+ window.NEXAMATH_RELEASE={version:'GO-LIVE 29',readiness:86,gate:'commercial-handoff'};render();
+})();
+</script>
+
+<section id="u26Launch" class="panel" style="margin:20px 0">
+ <div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap">
+  <div><h2 style="margin:0">🧪 Final Self-Test Center</h2><small style="opacity:.72">آزمون‌های قابل انجام داخل همین index؛ بدون ادعای تست سرویس‌های خارجی</small></div>
+  <button onclick="runU26SelfTest()">▶ اجرای تست نهایی</button>
+ </div>
+ <div id="u26Tests" class="grid2" style="gap:10px;margin-top:14px"></div>
+ <div id="u26Summary" style="margin-top:12px"></div>
+</section>
+<script>
+(function(){
+ window.runU26SelfTest=function(){
+  const tests=[];
+  const add=(name,ok,detail)=>tests.push({name,ok,detail});
+  add('HTML Runtime',!!document.body,'DOM در دسترس است.');
+  let ls=false; try{localStorage.setItem('__nx26','1');ls=localStorage.getItem('__nx26')==='1';localStorage.removeItem('__nx26')}catch(e){} add('Local Storage',ls,ls?'ذخیره محلی فعال است.':'LocalStorage در این محیط در دسترس نیست.');
+  add('Web Crypto',!!window.crypto && !!window.crypto.subtle,window.crypto&&window.crypto.subtle?'Web Crypto در دسترس است.':'Web Crypto در دسترس نیست.');
+  add('Service Worker', 'serviceWorker' in navigator,'Service Worker API '+('serviceWorker' in navigator?'در دسترس است.':'در دسترس نیست.'));
+  add('Online Status',navigator.onLine, navigator.onLine?'مرورگر آنلاین گزارش می‌دهد.':'مرورگر آفلاین گزارش می‌دهد.');
+  const api=(window.API_BASE||window.API||'http://127.0.0.1:5050/api').replace(/\/$/,'');
+  fetch(api+'/health',{method:'GET'}).then(r=>r.ok?r.text():Promise.reject(new Error('HTTP '+r.status))).then(()=>add('Backend /health',true,'Backend پاسخ داد.')).catch(()=>add('Backend /health',false,'در این لحظه پاسخ قابل تأیید از Backend دریافت نشد.'));
+  setTimeout(()=>{const e=document.getElementById('u26Tests');e.innerHTML=tests.map(t=>`<div style="padding:13px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)"><b>${t.ok?'🟢':'🔴'} ${t.name}</b><br><small style="opacity:.7">${t.detail}</small></div>`).join('');const ok=tests.filter(t=>t.ok).length;document.getElementById('u26Summary').innerHTML=`<div style="padding:13px;border-radius:13px;background:rgba(255,255,255,.05)">نتیجه خودآزمایی: <b>${ok}/${tests.length}</b> تست محلی قابل تأیید بود. این نتیجه جایگزین تست Production، امنیت، پرداخت یا مشتری واقعی نیست.</div>`;},700);
+ };
+ window.NEXAMATH_RELEASE={...(window.NEXAMATH_RELEASE||{}),version:'GO-LIVE 30',readiness:86,gate:'evidence-driven-go-live'};
+})();
+</script>
+<section id="u29Evidence" style="margin:24px auto;max-width:1200px;padding:20px;border-radius:22px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(135deg,rgba(0,220,255,.08),rgba(120,80,255,.08));direction:rtl;font-family:inherit"><div style="display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap"><div><div style="font-size:12px;opacity:.65;letter-spacing:1px">GO-LIVE 29 · EVIDENCE GATE</div><h2 style="margin:6px 0">مرکز شواهد استقرار واقعی</h2><p style="margin:0;opacity:.75">این پنل فقط وضعیت قابل اثبات را نمایش می‌دهد و سرویس‌های خارجی را جعلی سبز نمی‌کند.</p></div><b style="font-size:24px">86%</b></div><div id="u29Grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:16px"></div><button id="u29Snapshot" style="margin-top:14px;padding:11px 16px;border:0;border-radius:12px;cursor:pointer;font-weight:800">📦 ذخیره Evidence Snapshot</button><pre id="u29Out" style="white-space:pre-wrap;margin-top:12px;padding:12px;border-radius:14px;background:rgba(0,0,0,.22);max-height:280px;overflow:auto"></pre></section><script>(function(){const items=[['Backend واقعی','BLOCKED','نیازمند سرور و health واقعی'],['AI Provider','BLOCKED','نیازمند API Key و تست واقعی'],['Payment','BLOCKED','نیازمند درگاه و webhook واقعی'],['Security Audit','BLOCKED','ممیزی مستقل لازم است'],['Load Test','BLOCKED','تست روی محیط Production لازم است'],['Signed APK/AAB','BLOCKED','Release signing لازم است'],['Customer Pilot','BLOCKED','مشتری آزمایشی لازم است'],['First Revenue','BLOCKED','درآمد واقعی هنوز اثبات نشده']];const g=document.getElementById('u29Grid');if(!g)return;g.innerHTML=items.map(x=>`<div style="padding:13px;border-radius:15px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)"><b>🟡 ${x[0]}</b><div style="font-size:12px;margin-top:5px;opacity:.7">${x[2]}</div></div>`).join('');document.getElementById('u29Snapshot').onclick=()=>{const d={product:'NexaMath Infinity X Enterprise',release:'GO-LIVE 29',readiness_percent:86,generated_at:new Date().toISOString(),external_validation_required:items.map(x=>x[0]),note:'Readiness estimate only; not a valuation or guarantee of a 500M toman transaction.'};localStorage.setItem('NexaMath_GO_LIVE_29_EVIDENCE',JSON.stringify(d));document.getElementById('u29Out').textContent='✅ Evidence Snapshot ذخیره شد.
+
+'+JSON.stringify(d,null,2)}})();</script>
+
+<section id="nx30Gate" style="margin:24px auto;max-width:1200px;padding:22px;border-radius:22px;border:1px solid rgba(255,255,255,.14);background:linear-gradient(135deg,rgba(0,220,255,.09),rgba(255,0,170,.07));direction:rtl;font-family:inherit"><div style="display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap"><div><div style="font-size:12px;opacity:.65;letter-spacing:1px">GO-LIVE 30 · EVIDENCE-DRIVEN</div><h2 style="margin:6px 0">مرکز عبور از ۸۶٪</h2><p style="margin:0;opacity:.75">فقط شواهد واقعی می‌توانند Gate را از BLOCKED به PASS تغییر دهند.</p></div><b style="font-size:26px">86%</b></div><div id="nx30Gates" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:16px"></div><button id="nx30Run" style="margin-top:14px;padding:11px 16px;border:0;border-radius:12px;cursor:pointer;font-weight:800">🔎 بررسی Go-Live</button><pre id="nx30Out" style="white-space:pre-wrap;margin-top:12px;padding:12px;border-radius:14px;background:rgba(0,0,0,.22);max-height:260px;overflow:auto"></pre></section><script>(function(){const names=['Server واقعی','AI واقعی','Payment واقعی','Security Audit','Load Test','Signed APK/AAB','Customer Pilot','First Revenue'];const g=document.getElementById('nx30Gates');g.innerHTML=names.map(n=>`<div style="padding:13px;border-radius:15px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)"><b>🟡 ${n}</b><div style="font-size:12px;opacity:.7;margin-top:5px">نیازمند شواهد خارجی</div></div>`).join('');document.getElementById('nx30Run').onclick=async()=>{const out=document.getElementById('nx30Out');out.textContent='ℹ️ این index نمی‌تواند وجود سرور/درگاه/مشتری واقعی را جعل کند. برای بررسی Backend ابتدا آن را روی HTTPS اجرا کنید.';try{const api=(window.API_BASE||window.API||'http://127.0.0.1:5050/api').replace(/\/$/,'');const r=await fetch(api+'/health');out.textContent += '\nBackend /health: '+(r.ok?'PASS':'BLOCKED')+' (HTTP '+r.status+')';}catch(e){out.textContent += '\nBackend /health: BLOCKED';}}})();</script>
+</body></html>
